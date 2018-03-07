@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 import javax.swing.JOptionPane;
 
 public class ATM {
@@ -84,10 +86,29 @@ class Employee extends Person{
 
 class Customer extends Person{
 	public int cashAmount;
-
+	public boolean cardins;
+	
 	public Customer(String name, int cid, int cashAmount){
 		super(name,cid);
 		this.cashAmount = cashAmount;
+		cardins = false;
+	}
+	public void insertBankingcard (){
+		System.out.println("Do you insert your card(y/n)");
+		Scanner scanner = new Scanner(System.in);
+		String input = scanner.nextLine();
+		if(input.equals("y")){
+			cardins = true;
+		}
+		cardins = false;
+	}
+	
+	public void takeBankingcard (){																				//card will be taken out.
+		cardins = false;
+	}
+	
+	public void enterPin(int pin){																				// pin for the right account
+		
 	}
 }
 
