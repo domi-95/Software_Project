@@ -5,5 +5,6 @@
 	<classpathentry kind="src" path="/org.eclipse.swt"/>
 	<classpathentry kind="lib" path="swing2swt.jar"/>
 	<classpathentry kind="src" path="/Vorlesung7"/>
+	<classpathentry kind="lib" path="C:/Program Files/eclipse neon 3/eclipse/org.eclipse.swt-3.1.jar/org.eclipse.swt-3.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
