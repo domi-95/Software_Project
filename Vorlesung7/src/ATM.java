@@ -13,10 +13,7 @@ public class ATM {
 	}
 }
 
-class Banking_system {
-	public int id;
-	
-}
+
 
 abstract class Person {
 	public int id;
