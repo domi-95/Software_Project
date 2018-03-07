@@ -67,8 +67,9 @@ public class Password {
 		btnOK.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				if (enterPassword != null){
-					// neuer Bildschirm auf
+				if (enterPassword != null){						// Prüfung muss noch umgebaut werden, wenn Inhalt vorhanden
+					Cash screen = new Cash();					// geht so mein neuer Bildschirm auf?
+					
 					
 				}else if (counter == 3){
 					JOptionPane.showInputDialog("You entered your PIN wrong to often.");

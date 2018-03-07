@@ -63,6 +63,7 @@ public class ATM_Interface {
 	 * Create contents of the window.
 	 */
 	protected void createContents() {
+		
 		shlBankOfFinland = new Shell();
 		shlBankOfFinland.setSize(450, 300);
 		shlBankOfFinland.setText("Bank of Finland");
@@ -83,6 +84,7 @@ public class ATM_Interface {
 		btnCheckAccount.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
+				
 			}
 		});
 		btnCheckAccount.setText("Check Account Balance");
