@@ -5,11 +5,14 @@ import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Text;
+import org.eclipse.swt.widgets.Button;
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.events.SelectionEvent;
 
 public class Password {
 
 	protected Shell shell;
-	private Text text;
+	private Text enterPassword;
 
 	/**
 	 * Launch the application.
@@ -51,8 +54,19 @@ public class Password {
 		lblPIN.setBounds(40, 35, 143, 15);
 		lblPIN.setText("Please enter your PIN");
 		
-		text = new Text(shell, SWT.BORDER);
-		text.setBounds(111, 104, 76, 21);
+		enterPassword = new Text(shell, SWT.BORDER);
+		enterPassword.setBounds(65, 71, 76, 21);
+		
+		Button btnOK = new Button(shell, SWT.NONE);
+		btnOK.setEnabled(true);
+		btnOK.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				if ()
+			}
+		});
+		btnOK.setBounds(53, 144, 75, 25);
+		btnOK.setText("OK");
 
 	}
 }
