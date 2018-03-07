@@ -61,7 +61,7 @@ class Bank_branch{
 	String town;
 	String zip;
 	
-	public Bank_branch(string street, string town, string zip){
+	public Bank_branch(String street, String town, String zip){
 		this.street = street;
 		this.town = town;
 		this.zip = zip;
