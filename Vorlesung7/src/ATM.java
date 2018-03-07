@@ -55,7 +55,12 @@ class Manager extends Person{
 		super(name,pid);
 	}
 	
-	public void defineCashAmount(ATM terminal, int amount){
+	public int defineCashAmount(ATM terminal){
+		
+		int amount;
+		amount = (terminal.cashAmount -1000)*-1;																	// to have 1000 Euro Cash
+		
+		return amount;
 		
 	}
 }
@@ -69,7 +74,8 @@ class Employee extends Person{
 		if (terminal.checkCashAmount(terminal.cashAmount) == true){
 			terminal.usable = true;																					// ATM is usable again
 		}else{
-			JOptionPane.showInputDialog("")
+			amount = (terminal.cashAmount -1000)*-1;
+			refillATM(terminal,amount );																			// Recursion
 		};
 	}
 }
