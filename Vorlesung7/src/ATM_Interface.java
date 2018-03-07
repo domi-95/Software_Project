@@ -1,4 +1,6 @@
-package gui;
+
+import javax.swing.JOptionPane;
+
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
@@ -13,6 +15,7 @@ import org.eclipse.swt.custom.StackLayout;
 import swing2swt.layout.FlowLayout;
 
 public class ATM_Interface {
+	
 
 	protected Shell shlBankOfFinland;
 
@@ -21,13 +24,21 @@ public class ATM_Interface {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		ATM terminal = new ATM(1000, 1234, true);						//our ATM terminal
 		try {
 			ATM_Interface window = new ATM_Interface();
+			if (terminal.usable == true){
 			window.open();
+			}
+			else{
+				window.blocked();
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
-		}
-	}
+		}}
+			
+		
+	
 
 	/**
 	 * Open the window.
@@ -42,6 +53,10 @@ public class ATM_Interface {
 				display.sleep();
 			}
 		}
+	}
+	public void blocked(){
+		Display display = Display.getDefault();
+		JOptionPane.showInputDialog("This terminal is out of order.");
 	}
 
 	/**

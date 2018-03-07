@@ -1,8 +1,11 @@
-package gui;
+
 
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Label;
+
+import javax.swing.JOptionPane;
+
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.swt.widgets.Button;
@@ -13,6 +16,7 @@ public class Password {
 
 	protected Shell shell;
 	private Text enterPassword;
+	private int counter;
 
 	/**
 	 * Launch the application.
@@ -46,6 +50,7 @@ public class Password {
 	 * Create contents of the window.
 	 */
 	protected void createContents() {
+		int i = 0;
 		shell = new Shell();
 		shell.setSize(450, 300);
 		shell.setText("SWT Application");
@@ -62,7 +67,18 @@ public class Password {
 		btnOK.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				if ()
+				if (enterPassword != null){
+					// neuer Bildschirm auf
+					
+				}else if (counter == 3){
+					JOptionPane.showInputDialog("You entered your PIN wrong to often.");
+					//Karte einziehen
+					ATM_Interface back = new ATM_Interface();
+				}else{
+					JOptionPane.showInputDialog("Entered PIN is incorrect. Please try again.");
+					counter = counter +1;
+					ATM_Interface back = new ATM_Interface();
+				}
 			}
 		});
 		btnOK.setBounds(53, 144, 75, 25);
