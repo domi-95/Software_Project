@@ -103,8 +103,9 @@ class Customer extends Person{
         public int pin;
         String name;
 	
-	public Customer(String name, int cid, int cashAmount){
+	public Customer(String name, int cid, int cashAmount, int pin){
 		super(name,cid);
+                this.pin = pin;
 		this.cashAmount = cashAmount;
 		cardins = false;
 	}
