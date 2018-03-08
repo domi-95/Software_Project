@@ -18,11 +18,13 @@ public class ATM {
 	int cashAmount;
 	int serialNumber;
 	boolean usable;								// hab ich eingefügt um den ATM sperren zu können
-	
-	public ATM (int amount, int nr, boolean usable){
-		cashAmount = amount;
-		serialNumber = nr;
-		usable = true;
+	Bank_branch location;
+        
+	public ATM (int amount, int nr, boolean usable, Bank_branch location){
+		this.cashAmount = amount;
+		this.serialNumber = nr;
+		this.usable = true;
+                this.location = location;
 		this.checkCashAmount(cashAmount);
 		
 	}
@@ -119,13 +121,13 @@ class Customer extends Person{
 		cardins = false;
 	}
 	
-	public void enterPin(int pin){																				// pin for the right account
+	public void enterPin(int pin){					//brauchen wir das?															// pin for the right account
 		
 	}
 }
 
 class Surveillance_system{
-	
+                                                                        // können wir das auch rauslassen?
 	
 	
 }

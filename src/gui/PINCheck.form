@@ -30,11 +30,9 @@
           </Group>
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="94" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="txtCardnr" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="txtPIN" min="-2" max="-2" attributes="0"/>
-                  <Component id="fieldCardnr" alignment="0" max="32767" attributes="0"/>
-                  <Component id="fieldPIN" alignment="0" max="32767" attributes="0"/>
+                  <Component id="fieldPIN" alignment="0" min="-2" pref="147" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="159" max="32767" attributes="0"/>
           </Group>
@@ -43,15 +41,11 @@
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
-              <Component id="txtCardnr" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-              <Component id="fieldCardnr" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="53" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
               <Component id="txtPIN" min="-2" max="-2" attributes="0"/>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
               <Component id="fieldPIN" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+              <EmptySpace pref="122" max="32767" attributes="0"/>
               <Component id="btnOK" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
           </Group>
@@ -73,21 +67,6 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnOKActionPerformed"/>
       </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="txtCardnr">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Please enter your Cardnumber"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JTextField" name="fieldCardnr">
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldCardnrActionPerformed"/>
-      </Events>
-      <AuxValues>
-        <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="PINCheck_fieldCardnr"/>
-        <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="true"/>
-        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="0"/>
-      </AuxValues>
     </Component>
   </SubComponents>
 </Form>

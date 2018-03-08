@@ -16,8 +16,6 @@ public class PINCheck extends javax.swing.JFrame {
     int counter = 0;
     private javax.swing.JButton btnOK;
     private javax.swing.JPasswordField fieldPIN;
-    private javax.swing.JTextField fieldCardnr;
-    private javax.swing.JLabel txtCardnr;
     private javax.swing.JLabel txtPIN;
 
     /**
@@ -40,8 +38,6 @@ public class PINCheck extends javax.swing.JFrame {
         txtPIN = new javax.swing.JLabel();
         fieldPIN = new javax.swing.JPasswordField();
         btnOK = new javax.swing.JButton();
-        txtCardnr = new javax.swing.JLabel();
-        javax.swing.JTextField fieldCardnr = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -51,14 +47,6 @@ public class PINCheck extends javax.swing.JFrame {
         btnOK.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnOKActionPerformed(evt);
-            }
-        });
-
-        txtCardnr.setText("Please enter your Cardnumber");
-
-        fieldCardnr.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fieldCardnrActionPerformed(evt);
             }
         });
 
@@ -72,25 +60,19 @@ public class PINCheck extends javax.swing.JFrame {
                 .addGap(39, 39, 39))
             .addGroup(layout.createSequentialGroup()
                 .addGap(94, 94, 94)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txtCardnr, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtPIN)
-                    .addComponent(fieldCardnr)
-                    .addComponent(fieldPIN))
+                    .addComponent(fieldPIN, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(159, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(55, 55, 55)
-                .addComponent(txtCardnr)
-                .addGap(31, 31, 31)
-                .addComponent(fieldCardnr, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
+                .addGap(53, 53, 53)
                 .addComponent(txtPIN)
-                .addGap(18, 18, 18)
+                .addGap(43, 43, 43)
                 .addComponent(fieldPIN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 122, Short.MAX_VALUE)
                 .addComponent(btnOK)
                 .addGap(25, 25, 25))
         );
@@ -98,14 +80,10 @@ public class PINCheck extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void fieldCardnrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldCardnrActionPerformed
-       
-    }//GEN-LAST:event_fieldCardnrActionPerformed
-
     private void btnOKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOKActionPerformed
        String PIN= fieldPIN.getText();
-       String CNr =fieldCardnr.getText();
-       if ( PIN != null && CNr != null) {						// Prüfung muss noch umgebaut werden, wenn Inhalt vorhanden
+      
+       if ( PIN != null ) {						// Prüfung muss noch umgebaut werden, wenn Inhalt vorhanden
             WithdrawCash screen = new WithdrawCash();					// geht so mein neuer Bildschirm auf?
 					
 					
@@ -161,7 +139,6 @@ public class PINCheck extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnOK;
     private javax.swing.JPasswordField fieldPIN;
-    private javax.swing.JLabel txtCardnr;
     private javax.swing.JLabel txtPIN;
     // End of variables declaration//GEN-END:variables
 }
