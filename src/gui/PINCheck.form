@@ -59,6 +59,9 @@
       </Properties>
     </Component>
     <Component class="javax.swing.JPasswordField" name="fieldPIN">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldPINActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnOK">
       <Properties>

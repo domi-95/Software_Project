@@ -13,7 +13,7 @@ public class Information {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        Customer max = new Customer(500, false, 123, "Max");
+        Customer max = new Customer("Max", 27892, 1000 , 2351);
         
     }
 }

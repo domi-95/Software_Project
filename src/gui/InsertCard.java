@@ -34,7 +34,7 @@ public class InsertCard extends javax.swing.JFrame {
 
         txtWelcom.setText("Welcome. Please insert your card.");
 
-        btnInserted.setText("I inserted my card.");
+        btnInserted.setText("Insert card");
         btnInserted.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnInsertedActionPerformed(evt);
@@ -46,20 +46,23 @@ public class InsertCard extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(84, 84, 84)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnInserted)
-                    .addComponent(txtWelcom))
-                .addContainerGap(152, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(116, 116, 116)
+                        .addComponent(btnInserted, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(86, 86, 86)
+                        .addComponent(txtWelcom)))
+                .addContainerGap(150, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(66, 66, 66)
+                .addGap(78, 78, 78)
                 .addComponent(txtWelcom)
-                .addGap(57, 57, 57)
-                .addComponent(btnInserted)
-                .addContainerGap(140, Short.MAX_VALUE))
+                .addGap(29, 29, 29)
+                .addComponent(btnInserted, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(118, Short.MAX_VALUE))
         );
 
         pack();
@@ -67,6 +70,8 @@ public class InsertCard extends javax.swing.JFrame {
 
     private void btnInsertedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsertedActionPerformed
        PINCheck home = new PINCheck();
+       this.setVisible(false);
+       new HomeScreen().setVisible(true);
     }//GEN-LAST:event_btnInsertedActionPerformed
 
     /**

@@ -14,9 +14,6 @@ import javax.swing.JOptionPane;
 
 public class PINCheck extends javax.swing.JFrame {
     int counter = 0;
-    private javax.swing.JButton btnOK;
-    private javax.swing.JPasswordField fieldPIN;
-    private javax.swing.JLabel txtPIN;
 
     /**
      * Creates new form PINCheck
@@ -42,6 +39,12 @@ public class PINCheck extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         txtPIN.setText("Please enter your PIN");
+
+        fieldPIN.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                fieldPINActionPerformed(evt);
+            }
+        });
 
         btnOK.setText("OK");
         btnOK.addActionListener(new java.awt.event.ActionListener() {
@@ -98,6 +101,10 @@ public class PINCheck extends javax.swing.JFrame {
             PINCheck back = new PINCheck();
         }
     }//GEN-LAST:event_btnOKActionPerformed
+
+    private void fieldPINActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldPINActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fieldPINActionPerformed
     /**
      * @param args the command line arguments
      */ 
