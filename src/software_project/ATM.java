@@ -100,10 +100,10 @@ class Customer extends Person{
 	public boolean cardins;
         public int pin;
         String name;
-        public int ccounter = 0;
+        public static int ccounter = 1;
 	
-	public Customer(String name, int cid, int cashAmount, int pin){
-		super(name,cid);
+	public Customer(String name, int cashAmount, int pin){
+		super(name,ccounter);
                 this.pin = pin;
 		this.cashAmount = cashAmount;
 		cardins = false;
@@ -111,6 +111,9 @@ class Customer extends Person{
 	}
         public int getccounter(){
             return ccounter;
+        }
+        public int getPin(){
+            return pin;
         }
 	public void insertBankingcard (ATM terminal, Banking_account ba){
 		System.out.println("Do you insert your card(y/n)");
