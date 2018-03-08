@@ -34,7 +34,7 @@
                   <Component id="txtCardnr" max="32767" attributes="0"/>
                   <Component id="txtPIN" min="-2" max="-2" attributes="0"/>
                   <Component id="fieldCardnr" alignment="0" max="32767" attributes="0"/>
-                  <Component id="fieldPassword" alignment="0" max="32767" attributes="0"/>
+                  <Component id="fieldPIN" alignment="0" max="32767" attributes="0"/>
               </Group>
               <EmptySpace pref="159" max="32767" attributes="0"/>
           </Group>
@@ -50,7 +50,7 @@
               <EmptySpace pref="53" max="32767" attributes="0"/>
               <Component id="txtPIN" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="fieldPassword" min="-2" max="-2" attributes="0"/>
+              <Component id="fieldPIN" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
               <Component id="btnOK" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
@@ -64,10 +64,7 @@
         <Property name="text" type="java.lang.String" value="Please enter your PIN"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JPasswordField" name="fieldPassword">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="jPasswordField1"/>
-      </Properties>
+    <Component class="javax.swing.JPasswordField" name="fieldPIN">
     </Component>
     <Component class="javax.swing.JButton" name="btnOK">
       <Properties>
@@ -86,6 +83,11 @@
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="fieldCardnrActionPerformed"/>
       </Events>
+      <AuxValues>
+        <AuxValue name="JavaCodeGenerator_SerializeTo" type="java.lang.String" value="PINCheck_fieldCardnr"/>
+        <AuxValue name="JavaCodeGenerator_VariableLocal" type="java.lang.Boolean" value="true"/>
+        <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="0"/>
+      </AuxValues>
     </Component>
   </SubComponents>
 </Form>

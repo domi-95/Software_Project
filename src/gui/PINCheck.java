@@ -5,11 +5,20 @@
  */
 package gui;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author FT7673
  */
+
 public class PINCheck extends javax.swing.JFrame {
+    int counter = 0;
+    private javax.swing.JButton btnOK;
+    private javax.swing.JPasswordField fieldPIN;
+    private javax.swing.JTextField fieldCardnr;
+    private javax.swing.JLabel txtCardnr;
+    private javax.swing.JLabel txtPIN;
 
     /**
      * Creates new form PINCheck
@@ -29,16 +38,14 @@ public class PINCheck extends javax.swing.JFrame {
     private void initComponents() {
 
         txtPIN = new javax.swing.JLabel();
-        fieldPassword = new javax.swing.JPasswordField();
+        fieldPIN = new javax.swing.JPasswordField();
         btnOK = new javax.swing.JButton();
         txtCardnr = new javax.swing.JLabel();
-        fieldCardnr = new javax.swing.JTextField();
+        javax.swing.JTextField fieldCardnr = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         txtPIN.setText("Please enter your PIN");
-
-        fieldPassword.setText("jPasswordField1");
 
         btnOK.setText("OK");
         btnOK.addActionListener(new java.awt.event.ActionListener() {
@@ -69,7 +76,7 @@ public class PINCheck extends javax.swing.JFrame {
                     .addComponent(txtCardnr, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(txtPIN)
                     .addComponent(fieldCardnr)
-                    .addComponent(fieldPassword))
+                    .addComponent(fieldPIN))
                 .addContainerGap(159, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -82,7 +89,7 @@ public class PINCheck extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
                 .addComponent(txtPIN)
                 .addGap(18, 18, 18)
-                .addComponent(fieldPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(fieldPIN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27)
                 .addComponent(btnOK)
                 .addGap(25, 25, 25))
@@ -92,30 +99,33 @@ public class PINCheck extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void fieldCardnrActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldCardnrActionPerformed
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_fieldCardnrActionPerformed
 
     private void btnOKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOKActionPerformed
-        if (fieldPassword != null){						// Prüfung muss noch umgebaut werden, wenn Inhalt vorhanden
-					WithdrawCash screen = new WithdrawCash();					// geht so mein neuer Bildschirm auf?
+       String PIN= fieldPIN.getText();
+       String CNr =fieldCardnr.getText();
+       if ( PIN != null && CNr != null) {						// Prüfung muss noch umgebaut werden, wenn Inhalt vorhanden
+            WithdrawCash screen = new WithdrawCash();					// geht so mein neuer Bildschirm auf?
 					
 					
-				}else if (counter == 3){
-					JOptionPane.showInputDialog("You entered your PIN wrong to often.");
-					//Karte einziehen
-					ATM_Interface back = new ATM_Interface();
-				}else{
-					JOptionPane.showInputDialog("Entered PIN is incorrect. Please try again.");
-					counter = counter +1;
-					ATM_Interface back = new ATM_Interface();
+	}else if (counter == 3){
+            JOptionPane.showInputDialog("You entered your PIN wrong to often.");
+                                                                        //Karte einziehen
+            HomeScreen back = new HomeScreen();
+	}else{
+            JOptionPane.showInputDialog("Entered PIN is incorrect. Please try again.");
+            counter = counter +1;
+            PINCheck back = new PINCheck();
 				}
 			}
-		});
+		
     }//GEN-LAST:event_btnOKActionPerformed
 
     /**
      * @param args the command line arguments
-     */
+     */ 
+/*
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -141,18 +151,18 @@ public class PINCheck extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
+/*        java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new PINCheck().setVisible(true);
             }
         });
-    }
+    } */
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnOK;
-    private javax.swing.JTextField fieldCardnr;
-    private javax.swing.JPasswordField fieldPassword;
+    private javax.swing.JPasswordField fieldPIN;
     private javax.swing.JLabel txtCardnr;
     private javax.swing.JLabel txtPIN;
     // End of variables declaration//GEN-END:variables
 }
+
