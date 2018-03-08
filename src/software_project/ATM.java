@@ -100,13 +100,18 @@ class Customer extends Person{
 	public boolean cardins;
         public int pin;
         String name;
+        public int ccounter = 0;
 	
 	public Customer(String name, int cid, int cashAmount, int pin){
 		super(name,cid);
                 this.pin = pin;
 		this.cashAmount = cashAmount;
 		cardins = false;
+                ccounter = ccounter +1;
 	}
+        public int getccounter(){
+            return ccounter;
+        }
 	public void insertBankingcard (ATM terminal, Banking_account ba){
 		System.out.println("Do you insert your card(y/n)");
 		Scanner scanner = new Scanner(System.in);

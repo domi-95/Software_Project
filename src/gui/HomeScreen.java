@@ -95,16 +95,17 @@ public class HomeScreen extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCashActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCashActionPerformed
-        PINCheck next = new PINCheck();
+        WithdrawCash next = new WithdrawCash();
   
     }//GEN-LAST:event_btnCashActionPerformed
 
     private void btnTransferActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTransferActionPerformed
-       PINCheck next = new PINCheck();
+       TransferMoney next = new TransferMoney();
     }//GEN-LAST:event_btnTransferActionPerformed
 
     private void btnCheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCheckActionPerformed
         JOptionPane.showInputDialog("This function is not avaiable right now.");
+        HomeScreen back = new HomeScreen();
     }//GEN-LAST:event_btnCheckActionPerformed
 
     /**

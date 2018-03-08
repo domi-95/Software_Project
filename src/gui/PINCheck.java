@@ -87,8 +87,10 @@ public class PINCheck extends javax.swing.JFrame {
        String PIN= fieldPIN.getText();
        int pin = Integer.parseInt(PIN);
       
-       if ( pin != 0) {						// Prüfung muss noch umgebaut werden, wenn Inhalt vorhanden
-            HomeScreen screen = new HomeScreen();                   // geht so mein neuer Bildschirm auf?
+       if ( pin == 2351) {						// Prüfung muss noch umgebaut werden, wenn Inhalt vorhanden
+             HomeScreen next = new HomeScreen();
+            this.setVisible(false);
+            next.setVisible(true);                  
 					
 					
 	}else if (counter == 3){

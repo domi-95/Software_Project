@@ -5,6 +5,8 @@
  */
 package gui;
 
+import software_project.ATM;
+
 /**
  *
  * @author FT7673
@@ -97,11 +99,11 @@ public class WithdrawCash extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn10eActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn10eActionPerformed
-        
+        Customer.class 
     }//GEN-LAST:event_btn10eActionPerformed
 
     private void btndifferentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndifferentActionPerformed
-        // TODO add your handling code here:
+        WithdrawCashDifferent next = new WithdrawCashDifferent();
     }//GEN-LAST:event_btndifferentActionPerformed
 
     /**
