@@ -157,6 +157,6 @@ class Banking_account{
      }
      
      public void checksBankBalance(int banr, Banking_account ba){
-         Sy ba.balance;
+         System.out.println( ba.balance);
      }
  }
