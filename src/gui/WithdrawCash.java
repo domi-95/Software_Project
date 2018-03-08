@@ -99,7 +99,7 @@ public class WithdrawCash extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn10eActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn10eActionPerformed
-        Customer.class 
+   //     Customer.class 
     }//GEN-LAST:event_btn10eActionPerformed
 
     private void btndifferentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndifferentActionPerformed

@@ -30,6 +30,11 @@ public class Information {
         Banking_account balo = new Banking_account( lotta, 02345,4000.45);
         customer.add(lotta);
         
+        
+        
+       // for (int i = 0; i < Customer.class.getccounter(); i++){
+            
+        //}
         new gui.InsertCard().setVisible(true);
         
         System.out.println("bitch");
