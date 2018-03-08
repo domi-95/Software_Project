@@ -28,9 +28,9 @@ public class Information {
         
         ArrayList<Integer> pins = new ArrayList<Integer>(100);              //max. 100 Customer
         
-        for (int i = 0; i < Customer.class.getccounter(); i++){
+       // for (int i = 0; i < Customer.class.getccounter(); i++){
             
-        }
+        //}
         new gui.InsertCard().setVisible(true);
         
         System.out.println("bitch");
