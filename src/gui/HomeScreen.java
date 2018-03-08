@@ -5,6 +5,8 @@
  */
 package gui;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author FT7673
@@ -16,6 +18,7 @@ public class HomeScreen extends javax.swing.JFrame {
      */
     public HomeScreen() {
         initComponents();
+        // ATM muss auch inialisiert werden
     }
 
     /**
@@ -27,20 +30,35 @@ public class HomeScreen extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        txtHome = new javax.swing.JLabel();
         btnCash = new javax.swing.JButton();
         btnTransfer = new javax.swing.JButton();
         btnCheck = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("ATM Homescreen");
+        txtHome.setText("ATM Homescreen");
 
         btnCash.setText("WithdrawCash");
+        btnCash.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCashActionPerformed(evt);
+            }
+        });
 
         btnTransfer.setText("Transfer Money");
+        btnTransfer.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTransferActionPerformed(evt);
+            }
+        });
 
         btnCheck.setText("Check Account Balance");
+        btnCheck.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCheckActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -50,7 +68,7 @@ public class HomeScreen extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(150, 150, 150)
-                        .addComponent(jLabel1))
+                        .addComponent(txtHome))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(32, 32, 32)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -63,7 +81,7 @@ public class HomeScreen extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(28, 28, 28)
-                .addComponent(jLabel1)
+                .addComponent(txtHome)
                 .addGap(37, 37, 37)
                 .addComponent(btnCash)
                 .addGap(18, 18, 18)
@@ -75,6 +93,19 @@ public class HomeScreen extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnCashActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCashActionPerformed
+        PINCheck next = new PINCheck();
+  
+    }//GEN-LAST:event_btnCashActionPerformed
+
+    private void btnTransferActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTransferActionPerformed
+       PINCheck next = new PINCheck();
+    }//GEN-LAST:event_btnTransferActionPerformed
+
+    private void btnCheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCheckActionPerformed
+        JOptionPane.showInputDialog("This function is not avaiable right now.");
+    }//GEN-LAST:event_btnCheckActionPerformed
 
     /**
      * @param args the command line arguments
@@ -115,6 +146,6 @@ public class HomeScreen extends javax.swing.JFrame {
     private javax.swing.JButton btnCash;
     private javax.swing.JButton btnCheck;
     private javax.swing.JButton btnTransfer;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel txtHome;
     // End of variables declaration//GEN-END:variables
 }
