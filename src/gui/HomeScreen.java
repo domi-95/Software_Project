@@ -3,18 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package software_project;
+package gui;
 
 /**
  *
  * @author FT7673
  */
-public class PINCheck extends javax.swing.JFrame {
+public class HomeScreen extends javax.swing.JFrame {
 
     /**
-     * Creates new form PINCheck
+     * Creates new form HomeScreen
      */
-    public PINCheck() {
+    public HomeScreen() {
         initComponents();
     }
 
@@ -27,40 +27,50 @@ public class PINCheck extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        txtPIN = new javax.swing.JLabel();
-        fieldPassword = new javax.swing.JPasswordField();
-        btnOK = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        btnCash = new javax.swing.JButton();
+        btnTransfer = new javax.swing.JButton();
+        btnCheck = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        txtPIN.setText("Please enter your PIN");
+        jLabel1.setText("ATM Homescreen");
 
-        fieldPassword.setText("jPasswordField1");
+        btnCash.setText("WithdrawCash");
 
-        btnOK.setText("OK");
+        btnTransfer.setText("Transfer Money");
+
+        btnCheck.setText("Check Account Balance");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(94, 94, 94)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnOK)
-                    .addComponent(fieldPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtPIN))
-                .addContainerGap(195, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(150, 150, 150)
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(32, 32, 32)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnTransfer)
+                            .addComponent(btnCash)
+                            .addComponent(btnCheck))))
+                .addContainerGap(167, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(61, 61, 61)
-                .addComponent(txtPIN)
-                .addGap(34, 34, 34)
-                .addComponent(fieldPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(43, 43, 43)
-                .addComponent(btnOK)
-                .addContainerGap(105, Short.MAX_VALUE))
+                .addGap(28, 28, 28)
+                .addComponent(jLabel1)
+                .addGap(37, 37, 37)
+                .addComponent(btnCash)
+                .addGap(18, 18, 18)
+                .addComponent(btnTransfer)
+                .addGap(18, 18, 18)
+                .addComponent(btnCheck)
+                .addContainerGap(116, Short.MAX_VALUE))
         );
 
         pack();
@@ -83,27 +93,28 @@ public class PINCheck extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(PINCheck.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(HomeScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(PINCheck.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(HomeScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(PINCheck.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(HomeScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(PINCheck.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(HomeScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new PINCheck().setVisible(true);
+                new HomeScreen().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnOK;
-    private javax.swing.JPasswordField fieldPassword;
-    private javax.swing.JLabel txtPIN;
+    private javax.swing.JButton btnCash;
+    private javax.swing.JButton btnCheck;
+    private javax.swing.JButton btnTransfer;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
