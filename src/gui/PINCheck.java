@@ -82,24 +82,22 @@ public class PINCheck extends javax.swing.JFrame {
 
     private void btnOKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOKActionPerformed
        String PIN= fieldPIN.getText();
+       int pin = Integer.parseInt(PIN);
       
-       if ( PIN != null ) {						// Prüfung muss noch umgebaut werden, wenn Inhalt vorhanden
-            WithdrawCash screen = new WithdrawCash();					// geht so mein neuer Bildschirm auf?
+       if ( pin != 0) {						// Prüfung muss noch umgebaut werden, wenn Inhalt vorhanden
+            HomeScreen screen = new HomeScreen();                   // geht so mein neuer Bildschirm auf?
 					
 					
 	}else if (counter == 3){
             JOptionPane.showInputDialog("You entered your PIN wrong to often.");
-                                                                        //Karte einziehen
-            HomeScreen back = new HomeScreen();
+                                                                        //Karte einziehen durch PIN blockieren faken?
+            InsertCard back = new InsertCard();
 	}else{
             JOptionPane.showInputDialog("Entered PIN is incorrect. Please try again.");
             counter = counter +1;
             PINCheck back = new PINCheck();
-				}
-			}
-		
+        }
     }//GEN-LAST:event_btnOKActionPerformed
-
     /**
      * @param args the command line arguments
      */ 
@@ -141,5 +139,5 @@ public class PINCheck extends javax.swing.JFrame {
     private javax.swing.JPasswordField fieldPIN;
     private javax.swing.JLabel txtPIN;
     // End of variables declaration//GEN-END:variables
-}
 
+}
