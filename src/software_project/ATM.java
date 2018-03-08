@@ -51,8 +51,6 @@ public class ATM {
 	
 }
 
-
-
 abstract class Person {
 	public int id;
 	public String name;
@@ -143,9 +141,11 @@ class Banking_account{
 	int bnr;
 	double balance;
         int pin;
+        Customer cst;
 	
-	public Banking_account(int bnr, double balance ){
+	public Banking_account(Customer cst, int bnr, double balance ){
 	this.bnr = bnr;
+        pin = cst.pin;
 	this.balance = balance;
 	}
 }
@@ -157,8 +157,12 @@ class Banking_account{
          this.id = id;
      }
      
-     public void checksBankBalance(int banr, Banking_account ba){
+     public void checksBankBalance(Banking_account ba){
          System.out.println( ba.balance);
-     
+     }
+     public void transferMoney(Banking_account ba1, Banking_account ba2, double amount){
+         ba1.balance = ba1.balance - amount;
+         ba2.balance -= amount;
      }
  }
+    
