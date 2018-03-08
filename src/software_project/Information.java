@@ -5,6 +5,8 @@
  */
 package software_project;
 
+import java.util.Scanner;
+
 /**
  *
  * @author FT7673
@@ -14,6 +16,13 @@ public class Information {
         // TODO code application logic here
         
         Customer max = new Customer("Max", 27892, 1000 , 2351);
+        Banking_account ba = new Banking_account( max, 051235, 3000.45);
+        
+        new gui.InsertCard().setVisible(true);
+        
+        System.out.println("bitch");
+       
+
         
     }
 }

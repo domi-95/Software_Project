@@ -68,6 +68,8 @@ public class InsertCard extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    
+    
     private void btnInsertedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsertedActionPerformed
        PINCheck home = new PINCheck();
        this.setVisible(false);
