@@ -18,13 +18,12 @@ public class ATM {
 	int cashAmount;
 	int serialNumber;
 	boolean usable;								// hab ich eingefügt um den ATM sperren zu können
-	Bank_branch location;
+        int activeBnr;
         
-	public ATM (int amount, int nr, boolean usable, Bank_branch location){
+	public ATM (int amount, int nr, boolean usable){
 		this.cashAmount = amount;
 		this.serialNumber = nr;
 		this.usable = true;
-                this.location = location;
 		this.checkCashAmount(cashAmount);
 		
 	}
@@ -33,12 +32,7 @@ public class ATM {
 		cashAmount = amount;
 	}*/
 	
-	public void withdrawCash(int amount, Customer name){
-		cashAmount = cashAmount - amount;															// changes ATM Cash Amount
-		name.cashAmount = name.cashAmount + amount;													// changes Customer Cash Amount
-		this.checkCashAmount(cashAmount);															// controls if enough Cash is left
-		 
-	}
+	
 	
 	public boolean checkCashAmount(int amount) {
 		if (amount < 100){
@@ -48,6 +42,11 @@ public class ATM {
 		}return true;
 		
 	}
+        
+        public void discardBankingscard(Customer name){
+            name.takeBankingcard();
+            activeBnr = 0;
+        }
 
 	
 }
@@ -101,18 +100,21 @@ class Employee extends Person{
 class Customer extends Person{
 	public int cashAmount;
 	public boolean cardins;
+        public int pin;
+        String name;
 	
 	public Customer(String name, int cid, int cashAmount){
 		super(name,cid);
 		this.cashAmount = cashAmount;
 		cardins = false;
 	}
-	public void insertBankingcard (){
+	public void insertBankingcard (ATM terminal, Banking_account ba){
 		System.out.println("Do you insert your card(y/n)");
 		Scanner scanner = new Scanner(System.in);
 		String input = scanner.nextLine();
 		if(input.equals("y")){
 			cardins = true;
+                        terminal.activeBnr = ba.bnr;
 		}
 		cardins = false;
 	}
@@ -124,43 +126,37 @@ class Customer extends Person{
 	public void enterPin(int pin){					//brauchen wir das?															// pin for the right account
 		
 	}
-}
-
-class Surveillance_system{
-                                                                        // können wir das auch rauslassen?
-	
-	
-}
-
-class Bank_branch{
-	String street;
-	String town;
-	String zip;
-	
-	public Bank_branch(String street, String town, String zip){
-		this.street = street;
-		this.town = town;
-		this.zip = zip;
+        
+        public void withdrawCash(int amount, ATM terminal){
+		cashAmount = cashAmount + amount;															// changes ATM Cash Amount
+		terminal.cashAmount = terminal.cashAmount + amount;													// changes Customer Cash Amount
+		terminal.checkCashAmount(cashAmount);															// controls if enough Cash is left
+		 
 	}
-	
+        
+        
 }
 
-class Banking_card{
-	int pin;
-	
-	public Banking_card(int pin){
-		this.pin = pin;
-	}
-}
 
 class Banking_account{
-	int id;
+	int bnr;
 	double balance;
+        int pin;
 	
-	public Banking_account(int aid, double balance ){
-	this.id  = aid;
+	public Banking_account(int bnr, double balance ){
+	this.bnr = bnr;
 	this.balance = balance;
 	}
 }
 
-
+ class BankingSystem{
+     int id;
+     
+     public BankingSystem(int id){
+         this.id = id;
+     }
+     
+     public void checksBankBalance(int banr, Banking_account ba){
+         Sy ba.balance;
+     }
+ }
