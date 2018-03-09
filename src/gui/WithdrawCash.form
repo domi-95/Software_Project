@@ -87,11 +87,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="50 Euro"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn50eActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btn100e">
       <Properties>
         <Property name="text" type="java.lang.String" value="100 Euro"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn100eActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btndifferent">
       <Properties>

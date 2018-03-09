@@ -47,8 +47,18 @@ public class WithdrawCash extends javax.swing.JFrame {
         });
 
         btn50e.setText("50 Euro");
+        btn50e.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn50eActionPerformed(evt);
+            }
+        });
 
         btn100e.setText("100 Euro");
+        btn100e.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btn100eActionPerformed(evt);
+            }
+        });
 
         btndifferent.setText("Different");
         btndifferent.addActionListener(new java.awt.event.ActionListener() {
@@ -99,12 +109,22 @@ public class WithdrawCash extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn10eActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn10eActionPerformed
-   //     Customer.class 
+        
     }//GEN-LAST:event_btn10eActionPerformed
 
     private void btndifferentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndifferentActionPerformed
         WithdrawCashDifferent next = new WithdrawCashDifferent();
+        this.setVisible(false);
+        next.setVisible(true);
     }//GEN-LAST:event_btndifferentActionPerformed
+
+    private void btn100eActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn100eActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn100eActionPerformed
+
+    private void btn50eActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn50eActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn50eActionPerformed
 
     /**
      * @param args the command line arguments
