@@ -44,6 +44,7 @@ public class TransferMoney extends javax.swing.JFrame {
         fieldIBAN = new javax.swing.JTextField();
         fieldAmount = new javax.swing.JTextField();
         btnOK = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -80,6 +81,13 @@ public class TransferMoney extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setText("return");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -87,6 +95,11 @@ public class TransferMoney extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jButton1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnOK)
+                        .addGap(29, 29, 29))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtName)
@@ -101,10 +114,6 @@ public class TransferMoney extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(txtInfo)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnOK)
-                .addGap(29, 29, 29))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -124,7 +133,9 @@ public class TransferMoney extends javax.swing.JFrame {
                     .addComponent(txtAmount)
                     .addComponent(fieldAmount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 84, Short.MAX_VALUE)
-                .addComponent(btnOK)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnOK)
+                    .addComponent(jButton1))
                 .addGap(29, 29, 29))
         );
 
@@ -155,6 +166,11 @@ public class TransferMoney extends javax.swing.JFrame {
         }
     }
     }//GEN-LAST:event_btnOKActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        this.setVisible(false);
+        new gui.HomeScreen(s).setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -196,6 +212,7 @@ public class TransferMoney extends javax.swing.JFrame {
     private javax.swing.JTextField fieldAmount;
     private javax.swing.JTextField fieldIBAN;
     private javax.swing.JTextField fieldName;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel txtAmount;
     private javax.swing.JLabel txtBankAccountNr;
     private javax.swing.JLabel txtInfo;
