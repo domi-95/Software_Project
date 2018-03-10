@@ -87,19 +87,20 @@ public class PINCheck extends javax.swing.JFrame {
        String PIN= fieldPIN.getText();
        int pin = Integer.parseInt(PIN);
       
-       if ( pin == 2351) {						// Prüfung muss noch umgebaut werden, wenn Inhalt vorhanden
+       if ( pin == 2351) {						// Prüfung muss noch umgebaut werden, wenn Inhalt vorhanden, was passiert wenn nix eingetippt wurde?
              HomeScreen next = new HomeScreen();
             this.setVisible(false);
             next.setVisible(true);                  
 					
 					
-	}else if (counter == 3){
-            JOptionPane.showInputDialog("You entered your PIN wrong to often.");
+	}else if (counter ==2){
+            JOptionPane.showMessageDialog(null,"You entered your PIN wrong to often. Your card is going to be confiscated." );
                                                                         //Karte einziehen durch PIN blockieren faken?
             InsertCard back = new InsertCard();
 	}else{
-            JOptionPane.showInputDialog("Entered PIN is incorrect. Please try again.");
+            JOptionPane.showMessageDialog(null,"Entered PIN is incorrect. Please try again.");
             counter = counter +1;
+            fieldPIN.setText("");
             PINCheck back = new PINCheck();
         }
     }//GEN-LAST:event_btnOKActionPerformed

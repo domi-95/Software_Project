@@ -100,7 +100,8 @@ class Customer extends Person{
 	public boolean cardins;
         public int pin;
         String name;
-        public static int ccounter = 1;
+     
+        public static int ccounter = 1;         // id of the customer
 	
 	public Customer(String name, int cashAmount, int pin){
 		super(name,ccounter);
