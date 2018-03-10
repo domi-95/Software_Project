@@ -6,7 +6,6 @@
 package gui;
 
 import javax.swing.JOptionPane;
-
 /**
  *
  * @author FT7673
@@ -14,6 +13,8 @@ import javax.swing.JOptionPane;
 public class HomeScreen extends javax.swing.JFrame {
 
     software_project.Customer cust = null;
+    software_project.BankingSystem bs;
+    software_project.Banking_account ba;
     /**
      * Creates new form HomeScreen
      */
@@ -113,7 +114,7 @@ public class HomeScreen extends javax.swing.JFrame {
     }//GEN-LAST:event_btnTransferActionPerformed
 
     private void btnCheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCheckActionPerformed
-        
+        bs.checksBankBalance(ba);
         
     }//GEN-LAST:event_btnCheckActionPerformed
 
