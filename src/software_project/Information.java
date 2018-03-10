@@ -17,6 +17,8 @@ public class Information {
         // TODO code application logic here
         ArrayList<Customer> customer= new ArrayList<Customer>();              //unlimited how many customers are added
         int[] pin = {2351, 1001, 5678};
+
+      
         
         Customer max = new Customer("Max",  1000 , 2351);
         Banking_account bama = new Banking_account( max, 051235, 3000.45);
@@ -42,4 +44,6 @@ public class Information {
 
         
     }
+    
+ 
 }
