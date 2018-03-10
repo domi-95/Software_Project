@@ -39,6 +39,7 @@ public class WithdrawCash extends javax.swing.JFrame {
         btn50e = new javax.swing.JButton();
         btn100e = new javax.swing.JButton();
         btndifferent = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -72,6 +73,13 @@ public class WithdrawCash extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setText("return");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -93,6 +101,10 @@ public class WithdrawCash extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(btn100e)))
                         .addGap(78, 78, 78))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(34, 34, 34))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -107,7 +119,9 @@ public class WithdrawCash extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btn50e)
                     .addComponent(btndifferent))
-                .addContainerGap(116, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(20, 20, 20))
         );
 
         pack();
@@ -117,8 +131,7 @@ public class WithdrawCash extends javax.swing.JFrame {
         Banking_account acc = s.getBank();
         Customer cust = acc.getCst();
         ATM term = s.getTerminal();
-        acc.reduceAccount(10);
-        cust.withdrawCash(10, term);                               
+        cust.withdrawCash(10, term, acc); 
     }//GEN-LAST:event_btn10eActionPerformed
 
     private void btndifferentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndifferentActionPerformed
@@ -131,17 +144,20 @@ public class WithdrawCash extends javax.swing.JFrame {
        Banking_account acc = s.getBank();
         Customer cust = acc.getCst();
         ATM term = s.getTerminal();
-        acc.reduceAccount(100);
-        cust.withdrawCash(100, term);        
+        cust.withdrawCash(100, term, acc);        
     }//GEN-LAST:event_btn100eActionPerformed
 
     private void btn50eActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn50eActionPerformed
        Banking_account acc = s.getBank();
         Customer cust = acc.getCst();
         ATM term = s.getTerminal();
-        acc.reduceAccount(50);
-        cust.withdrawCash(50, term);      
+        cust.withdrawCash(50, term, acc);      
     }//GEN-LAST:event_btn50eActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        this.setVisible(false);
+        new gui.HomeScreen(s).setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -183,6 +199,7 @@ public class WithdrawCash extends javax.swing.JFrame {
     private javax.swing.JButton btn10e;
     private javax.swing.JButton btn50e;
     private javax.swing.JButton btndifferent;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

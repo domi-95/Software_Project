@@ -36,6 +36,7 @@ public class InsertCard extends javax.swing.JFrame {
 
         txtWelcom = new javax.swing.JLabel();
         btnInserted = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -45,6 +46,13 @@ public class InsertCard extends javax.swing.JFrame {
         btnInserted.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnInsertedActionPerformed(evt);
+            }
+        });
+
+        jButton1.setText("Return");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
             }
         });
 
@@ -61,6 +69,10 @@ public class InsertCard extends javax.swing.JFrame {
                         .addGap(86, 86, 86)
                         .addComponent(txtWelcom)))
                 .addContainerGap(150, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(41, 41, 41))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -69,7 +81,9 @@ public class InsertCard extends javax.swing.JFrame {
                 .addComponent(txtWelcom)
                 .addGap(29, 29, 29)
                 .addComponent(btnInserted, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(118, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(32, 32, 32))
         );
 
         pack();
@@ -82,6 +96,10 @@ public class InsertCard extends javax.swing.JFrame {
        this.setVisible(false);
        home.setVisible(true);
     }//GEN-LAST:event_btnInsertedActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -120,6 +138,7 @@ public class InsertCard extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnInserted;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel txtWelcom;
     // End of variables declaration//GEN-END:variables
 }

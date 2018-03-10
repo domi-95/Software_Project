@@ -41,6 +41,7 @@ public class HomeScreen extends javax.swing.JFrame {
         btnCash = new javax.swing.JButton();
         btnTransfer = new javax.swing.JButton();
         btnCheck = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -67,6 +68,13 @@ public class HomeScreen extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setText("Log out");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -83,6 +91,10 @@ public class HomeScreen extends javax.swing.JFrame {
                             .addComponent(btnCash)
                             .addComponent(btnCheck))))
                 .addContainerGap(167, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(38, 38, 38))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -95,7 +107,9 @@ public class HomeScreen extends javax.swing.JFrame {
                 .addComponent(btnTransfer)
                 .addGap(18, 18, 18)
                 .addComponent(btnCheck)
-                .addContainerGap(116, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(37, 37, 37))
         );
 
         pack();
@@ -121,6 +135,11 @@ public class HomeScreen extends javax.swing.JFrame {
        // bs.checksBankBalance(ba); brauchen wir nicht
         
     }//GEN-LAST:event_btnCheckActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        this.setVisible(false);
+        new gui.ChooseATM().setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -161,6 +180,7 @@ public class HomeScreen extends javax.swing.JFrame {
     private javax.swing.JButton btnCash;
     private javax.swing.JButton btnCheck;
     private javax.swing.JButton btnTransfer;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel txtHome;
     // End of variables declaration//GEN-END:variables
 }

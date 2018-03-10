@@ -21,9 +21,6 @@ public class Banking_account{
 	this.balance = balance;
 	}
         
-        public void reduceAccount (double amount){
-            this.balance = this.balance - amount;
-        }
 
     public int getBnr() {
         return bnr;

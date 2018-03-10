@@ -6,6 +6,7 @@
 package gui;
   
 
+import javax.swing.JOptionPane;
 import software_project.*;
 
 /**
@@ -40,6 +41,7 @@ public class WithdrawCashDifferent extends javax.swing.JFrame {
         txtEnterAmount = new javax.swing.JLabel();
         fieldAmount = new javax.swing.JTextField();
         btnOK = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -58,6 +60,13 @@ public class WithdrawCashDifferent extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setText("Return");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -69,7 +78,9 @@ public class WithdrawCashDifferent extends javax.swing.JFrame {
                     .addComponent(fieldAmount))
                 .addContainerGap(195, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(29, 29, 29)
+                .addComponent(jButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnOK)
                 .addGap(27, 27, 27))
         );
@@ -81,7 +92,9 @@ public class WithdrawCashDifferent extends javax.swing.JFrame {
                 .addGap(57, 57, 57)
                 .addComponent(fieldAmount, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 93, Short.MAX_VALUE)
-                .addComponent(btnOK)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnOK)
+                    .addComponent(jButton1))
                 .addGap(35, 35, 35))
         );
 
@@ -93,12 +106,19 @@ public class WithdrawCashDifferent extends javax.swing.JFrame {
     }//GEN-LAST:event_fieldAmountActionPerformed
 
     private void btnOKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOKActionPerformed
-       String PIN= fieldAmount.getText();
-       int pw = Integer.parseInt(PIN);
+       String text= fieldAmount.getText();
+       int amount = Integer.parseInt(text);
        Banking_account acc = s.getBank();
        ATM term = s.getTerminal();
-       acc.getCst().withdrawCash(pw, term);
+       acc.getCst().withdrawCash(amount, term, acc);
+       
+       JOptionPane.showMessageDialog(null, "Bitte entnehmen sie ihre " + amount + " €" , "Meldung", JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_btnOKActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        this.setVisible(false);
+        new gui.WithdrawCash().setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -138,6 +158,7 @@ public class WithdrawCashDifferent extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnOK;
     private javax.swing.JTextField fieldAmount;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel txtEnterAmount;
     // End of variables declaration//GEN-END:variables
 }

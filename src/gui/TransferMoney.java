@@ -14,6 +14,7 @@ public class TransferMoney extends javax.swing.JFrame {
 
     Session s;
     BankingSystem bs;
+    CustomerFile file;
     
     /**
      * Creates new form TransferMoney
@@ -144,10 +145,10 @@ public class TransferMoney extends javax.swing.JFrame {
 
     private void btnOKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOKActionPerformed
        // file.accountlist.get(2);
-        for( int i = 0 ; i < accountlist.size(); i++){
-        if( fieldIBAN.getText().equals(accountlist.get(i))){
+        for( int i = 0 ; i < file.accountlist.size(); i++){
+        if( fieldIBAN.getText().equals(file.accountlist.get(i))){
             Banking_account from = s.getBank();
-            Banking_account to = accountlist.get(i);
+            Banking_account to = file.accountlist.get(i);
             String s = fieldAmount.getText();
             double amount = Double.parseDouble(s);
             bs.transferMoney(from, to, amount);

@@ -42,6 +42,7 @@ public class PINCheck extends javax.swing.JFrame {
         txtPIN = new javax.swing.JLabel();
         fieldPIN = new javax.swing.JPasswordField();
         btnOK = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -60,12 +61,21 @@ public class PINCheck extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setText("Cancel");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(26, 26, 26)
+                .addComponent(jButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnOK)
                 .addGap(39, 39, 39))
             .addGroup(layout.createSequentialGroup()
@@ -83,7 +93,9 @@ public class PINCheck extends javax.swing.JFrame {
                 .addGap(43, 43, 43)
                 .addComponent(fieldPIN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 122, Short.MAX_VALUE)
-                .addComponent(btnOK)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnOK)
+                    .addComponent(jButton1))
                 .addGap(25, 25, 25))
         );
 
@@ -126,6 +138,11 @@ public class PINCheck extends javax.swing.JFrame {
     private void fieldPINActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldPINActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_fieldPINActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        this.setVisible(false);
+        new gui.ChooseATM().setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
     /**
      * @param args the command line arguments
      */ 
@@ -150,6 +167,7 @@ public class PINCheck extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnOK;
     private javax.swing.JPasswordField fieldPIN;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel txtPIN;
     // End of variables declaration//GEN-END:variables
 
