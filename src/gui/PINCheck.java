@@ -6,7 +6,6 @@
 package gui;
 
 import javax.swing.JOptionPane;
-
 /**
  *
  * @author FT7673
@@ -85,9 +84,16 @@ public class PINCheck extends javax.swing.JFrame {
 
     private void btnOKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOKActionPerformed
        String PIN= fieldPIN.getText();
-       int pin = Integer.parseInt(PIN);
-      
-       if ( pin == 2351) {						// Prüfung muss noch umgebaut werden, wenn Inhalt vorhanden, was passiert wenn nix eingetippt wurde?
+       int pw = Integer.parseInt(PIN);
+      // for( int i = 0; i < pin.length -1; i{                          // prüft das array auf alle pins wenn es was findet geht es zum Homescreen
+      //    if  pw == pin[i] {         
+      //    customerlist[i].cardins = true;                                 // anhand der Stelle im Array kann die Customer ID bestimmt werden
+      //     HomeScreen next = new HomeScreen();
+      //      this.setVisible(false);
+      //      next.setVisible(true);      
+      //}
+      //}
+       if ( pw == 2351) {						// Prüfung muss noch umgebaut werden, wenn Inhalt vorhanden
              HomeScreen next = new HomeScreen();
             this.setVisible(false);
             next.setVisible(true);                  
