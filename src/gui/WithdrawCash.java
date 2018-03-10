@@ -14,16 +14,25 @@ import software_project.ATM;
 public class WithdrawCash extends javax.swing.JFrame {
     
     software_project.Customer cust = null;
+    software_project.ATM term;
     /**
      * Creates new form WithdrawCash
      */
     public WithdrawCash() {
         initComponents();
     }
+    
     public WithdrawCash(software_project.Customer cust) {
         initComponents();
         this.cust = cust;
     }
+    
+    public WithdrawCash(software_project.Customer cust, software_project.ATM term) {
+        initComponents();
+        this.cust = cust;
+        this.term = term;
+    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -114,7 +123,7 @@ public class WithdrawCash extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn10eActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn10eActionPerformed
-        cust.cashAmount = cust.cashAmount + 10;                                 // über Customer auf Bankaccount und dort noch abbuchen?!
+        cust.withdrawCash(10, term);                               // über Customer auf Bankaccount und dort noch abbuchen?!
     }//GEN-LAST:event_btn10eActionPerformed
 
     private void btndifferentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndifferentActionPerformed
@@ -124,11 +133,11 @@ public class WithdrawCash extends javax.swing.JFrame {
     }//GEN-LAST:event_btndifferentActionPerformed
 
     private void btn100eActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn100eActionPerformed
-        // TODO add your handling code here:
+        cust.withdrawCash(100, term);
     }//GEN-LAST:event_btn100eActionPerformed
 
     private void btn50eActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn50eActionPerformed
-        // TODO add your handling code here:
+        cust.withdrawCash(50, term);
     }//GEN-LAST:event_btn50eActionPerformed
 
     /**

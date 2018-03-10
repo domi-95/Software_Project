@@ -4,23 +4,31 @@
  * and open the template in the editor.
  */
 package gui;
+  
+import software_project.Customer;
 
 /**
  *
  * @author FT7673
  */
 public class WithdrawCashDifferent extends javax.swing.JFrame {
-
+        
      software_project.Customer cust = null;
+     software_project.ATM term;
     /**
      * Creates new form WithdrawCashDifferent
      */
     public WithdrawCashDifferent() {
         initComponents();
     }
-    public WithdrawCashDifferent(software_project.Customer cust) {
+    public WithdrawCashDifferent(software_project.Customer cust, software_project.ATM term) {
         initComponents();
         this.cust = cust;
+        this.term = term;
+    }
+
+    WithdrawCashDifferent(Customer cust) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     /**
@@ -47,6 +55,11 @@ public class WithdrawCashDifferent extends javax.swing.JFrame {
         });
 
         btnOK.setText("OK");
+        btnOK.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnOKActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -79,8 +92,14 @@ public class WithdrawCashDifferent extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void fieldAmountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldAmountActionPerformed
-        // TODO add your handling code here:
+       
     }//GEN-LAST:event_fieldAmountActionPerformed
+
+    private void btnOKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOKActionPerformed
+       String PIN= fieldAmount.getText();
+       int pw = Integer.parseInt(PIN);
+       cust.withdrawCash(pw, term);
+    }//GEN-LAST:event_btnOKActionPerformed
 
     /**
      * @param args the command line arguments
