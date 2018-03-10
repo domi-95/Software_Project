@@ -5,7 +5,8 @@
  */
 package gui;
   
-import software_project.Customer;
+
+import software_project.*;
 
 /**
  *
@@ -13,23 +14,19 @@ import software_project.Customer;
  */
 public class WithdrawCashDifferent extends javax.swing.JFrame {
         
-     software_project.Customer cust = null;
-     software_project.ATM term;
+     Session s;
     /**
      * Creates new form WithdrawCashDifferent
      */
     public WithdrawCashDifferent() {
         initComponents();
     }
-    public WithdrawCashDifferent(software_project.Customer cust, software_project.ATM term) {
+    public WithdrawCashDifferent(Session s) {
         initComponents();
-        this.cust = cust;
-        this.term = term;
+        this.s = s;
     }
 
-    WithdrawCashDifferent(Customer cust) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+   
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -98,7 +95,9 @@ public class WithdrawCashDifferent extends javax.swing.JFrame {
     private void btnOKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOKActionPerformed
        String PIN= fieldAmount.getText();
        int pw = Integer.parseInt(PIN);
-       cust.withdrawCash(pw, term);
+       Banking_account acc = s.getBank();
+       ATM term = s.getTerminal();
+       acc.getCst().withdrawCash(pw, term);
     }//GEN-LAST:event_btnOKActionPerformed
 
     /**

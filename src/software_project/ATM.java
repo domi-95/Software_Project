@@ -16,24 +16,50 @@ import javax.swing.JOptionPane;
 
 public class ATM {
 	int cashAmount;
+        String location;
 	int serialNumber;
         static int atmCounter = 1;
 	boolean usable;								// hab ich eingefügt um den ATM sperren zu können
         int activeBnr;
         
-	public ATM (int amount){
+	public ATM (int amount, String location){
 		this.cashAmount = amount;
 		this.usable = true;
+                this.location = location;
                 this.serialNumber = atmCounter;
                 atmCounter = atmCounter +1;
 		this.checkCashAmount(cashAmount);
-                new gui.InsertCard().setVisible(true);
+               // new gui.InsertCard().setVisible(true);
 		
 	}
 	/*
 	public void setAmount (int amount) { 			würde ich raus nehmen
 		cashAmount = amount;
 	}*/
+
+    public int getCashAmount() {
+        return cashAmount;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public int getSerialNumber() {
+        return serialNumber;
+    }
+
+    public static int getAtmCounter() {
+        return atmCounter;
+    }
+
+    public boolean isUsable() {
+        return usable;
+    }
+
+    public int getActiveBnr() {
+        return activeBnr;
+    }
 	
 	
 	

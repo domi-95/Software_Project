@@ -5,7 +5,7 @@
  */
 package gui;
 
-import static software_project.CustomerFile.accountlist;
+import software_project.*;
 
 /**
  *
@@ -13,21 +13,20 @@ import static software_project.CustomerFile.accountlist;
  */
 public class AccountCheck extends javax.swing.JFrame {
 
-    software_project.Customer cust = null;
+    Session s;
     /**
      * Creates new form AccountCheck
      */
     public AccountCheck() {
         initComponents();     
     }
-     public AccountCheck(software_project.Customer cust) {
+     public AccountCheck(Session s) {
         initComponents(); 
-        this.cust = cust;
-        /*for (int i = 0; i < accountlist.size(); i++){
-            if (accountlist[i] equals cust)
-        }
-        String balance = software_project.Banking_account.Custome(cust);*/
-        jLabel1.setText("noch code schreiben");             // wieder von Customer auf Bankaccount zugreifen müssen
+        this.s = s;
+        Banking_account acc = s.getBank();
+       String balance = String.valueOf(acc.getBalance());
+ 
+        jLabel1.setText(balance);             
         
     }
 
@@ -109,7 +108,7 @@ public class AccountCheck extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnReturnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReturnActionPerformed
-        HomeScreen next = new HomeScreen(cust);
+        HomeScreen next = new HomeScreen(s);
             this.setVisible(false);
             next.setVisible(true);   
     }//GEN-LAST:event_btnReturnActionPerformed

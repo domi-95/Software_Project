@@ -5,18 +5,15 @@
  */
 package gui;
 
-import software_project.BankingSystem;
+import software_project.*;
 /**
  *
  * @author FT7673
  */
 public class TransferMoney extends javax.swing.JFrame {
 
-    software_project.Customer cust = null;
-    software_project.CustomerFile file;
-    software_project.Banking_account ba1;
-    software_project.Banking_account ba2;
-    software_project.BankingSystem bs;
+    Session s;
+    BankingSystem bs;
     
     /**
      * Creates new form TransferMoney
@@ -24,9 +21,9 @@ public class TransferMoney extends javax.swing.JFrame {
     public TransferMoney() {
         initComponents();
     }
-    public TransferMoney(software_project.Customer cust) {
+    public TransferMoney(Session s) {
         initComponents();
-        this.cust = cust;
+        this.s = s;
     }
 
     /**
@@ -40,7 +37,7 @@ public class TransferMoney extends javax.swing.JFrame {
 
         txtInfo = new javax.swing.JLabel();
         txtName = new javax.swing.JLabel();
-        txtIBAN = new javax.swing.JLabel();
+        txtBankAccountNr = new javax.swing.JLabel();
         txtAmount = new javax.swing.JLabel();
         fieldName = new javax.swing.JTextField();
         fieldIBAN = new javax.swing.JTextField();
@@ -53,7 +50,7 @@ public class TransferMoney extends javax.swing.JFrame {
 
         txtName.setText("Name of receiving person");
 
-        txtIBAN.setText("IBAN");
+        txtBankAccountNr.setText("Bank Account Number");
 
         txtAmount.setText("Amount of Money");
 
@@ -93,7 +90,7 @@ public class TransferMoney extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(txtName)
                             .addComponent(txtAmount)
-                            .addComponent(txtIBAN))
+                            .addComponent(txtBankAccountNr))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(fieldName, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -119,7 +116,7 @@ public class TransferMoney extends javax.swing.JFrame {
                     .addComponent(fieldName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtIBAN)
+                    .addComponent(txtBankAccountNr)
                     .addComponent(fieldIBAN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -146,13 +143,14 @@ public class TransferMoney extends javax.swing.JFrame {
     }//GEN-LAST:event_fieldAmountActionPerformed
 
     private void btnOKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOKActionPerformed
-        file.accountlist.get(2);
-        for( int i = 0 ; i < file.accountlist.size(); i++){
-        if( txtIBAN.getText().equals(file.accountlist.get(i))){
-            ba1 = file.accountlist.get(i);
-            String s = txtAmount.getText();
+       // file.accountlist.get(2);
+        for( int i = 0 ; i < accountlist.size(); i++){
+        if( fieldIBAN.getText().equals(accountlist.get(i))){
+            Banking_account from = s.getBank();
+            Banking_account to = accountlist.get(i);
+            String s = fieldAmount.getText();
             double amount = Double.parseDouble(s);
-            bs.transferMoney(ba1,ba2, amount);
+            bs.transferMoney(from, to, amount);
         }
     }
     }//GEN-LAST:event_btnOKActionPerformed
@@ -198,7 +196,7 @@ public class TransferMoney extends javax.swing.JFrame {
     private javax.swing.JTextField fieldIBAN;
     private javax.swing.JTextField fieldName;
     private javax.swing.JLabel txtAmount;
-    private javax.swing.JLabel txtIBAN;
+    private javax.swing.JLabel txtBankAccountNr;
     private javax.swing.JLabel txtInfo;
     private javax.swing.JLabel txtName;
     // End of variables declaration//GEN-END:variables

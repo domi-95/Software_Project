@@ -39,7 +39,9 @@ public class Information {
             
         //}
        
-       ATM inuse = new ATM (1500);                  // sollte GUI aufrufen
+       //ATM inuse = new ATM (1500, "Kokkola");                  // sollte GUI aufrufen
+       
+       new gui.ChooseATM().setVisible(true);
      
 
                 

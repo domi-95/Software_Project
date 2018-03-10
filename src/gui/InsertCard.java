@@ -5,17 +5,24 @@
  */
 package gui;
 
+import software_project.Session;
+
 /**
  *
  * @author FT7673
  */
 public class InsertCard extends javax.swing.JFrame {
 
+    Session s;
     /**
      * Creates new form InsertCard
      */
     public InsertCard() {
         initComponents();
+    }
+     public InsertCard(Session s) {
+        initComponents();
+        this.s = s;
     }
 
     /**
@@ -71,7 +78,7 @@ public class InsertCard extends javax.swing.JFrame {
     
     
     private void btnInsertedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInsertedActionPerformed
-       PINCheck home = new PINCheck();
+       PINCheck home = new PINCheck(s);
        this.setVisible(false);
        home.setVisible(true);
     }//GEN-LAST:event_btnInsertedActionPerformed

@@ -30,7 +30,7 @@
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="txtName" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="txtAmount" min="-2" max="-2" attributes="0"/>
-                          <Component id="txtIBAN" min="-2" max="-2" attributes="0"/>
+                          <Component id="txtBankAccountNr" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace pref="81" max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -65,7 +65,7 @@
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="txtIBAN" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="txtBankAccountNr" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="fieldIBAN" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
@@ -91,9 +91,9 @@
         <Property name="text" type="java.lang.String" value="Name of receiving person"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="txtIBAN">
+    <Component class="javax.swing.JLabel" name="txtBankAccountNr">
       <Properties>
-        <Property name="text" type="java.lang.String" value="IBAN"/>
+        <Property name="text" type="java.lang.String" value="Bank Account Number"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="txtAmount">

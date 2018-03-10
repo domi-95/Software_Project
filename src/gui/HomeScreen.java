@@ -6,13 +6,14 @@
 package gui;
 
 import javax.swing.JOptionPane;
+import software_project.*;
 /**
  *
  * @author FT7673
  */
 public class HomeScreen extends javax.swing.JFrame {
 
-    software_project.Customer cust = null;
+    Session s;
     software_project.BankingSystem bs;
     software_project.Banking_account ba;
     /**
@@ -22,9 +23,9 @@ public class HomeScreen extends javax.swing.JFrame {
         initComponents();
         
     }
-     public HomeScreen(software_project.Customer cust) {
+     public HomeScreen(Session s) {
         initComponents();
-        this.cust = cust;
+        this.s = s;
     }
 
     /**
@@ -101,20 +102,23 @@ public class HomeScreen extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCashActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCashActionPerformed
-       WithdrawCash with = new WithdrawCash(this.cust);
+       WithdrawCash with = new WithdrawCash(s);
        this.setVisible(false);
        with.setVisible(true);
   
     }//GEN-LAST:event_btnCashActionPerformed
 
     private void btnTransferActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTransferActionPerformed
-       TransferMoney next = new TransferMoney(this.cust);
+       TransferMoney next = new TransferMoney(s);
        this.setVisible(false);
        next.setVisible(true);
     }//GEN-LAST:event_btnTransferActionPerformed
 
     private void btnCheckActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCheckActionPerformed
-        bs.checksBankBalance(ba);
+       AccountCheck next = new AccountCheck(s);
+       this.setVisible(false);
+       next.setVisible(true);
+       // bs.checksBankBalance(ba); brauchen wir nicht
         
     }//GEN-LAST:event_btnCheckActionPerformed
 

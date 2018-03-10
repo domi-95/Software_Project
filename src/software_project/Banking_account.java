@@ -20,4 +20,26 @@ public class Banking_account{
         pin = cst.pin;
 	this.balance = balance;
 	}
+        
+        public void reduceAccount (double amount){
+            this.balance = this.balance - amount;
+        }
+
+    public int getBnr() {
+        return bnr;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public int getPin() {
+        return pin;
+    }
+
+    public Customer getCst() {
+        return cst;
+    }
+        
+        
 }

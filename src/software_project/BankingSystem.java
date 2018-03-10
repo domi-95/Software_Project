@@ -15,6 +15,6 @@ public class BankingSystem{
      }
      public static void transferMoney(Banking_account ba1, Banking_account ba2, double amount){
          ba1.balance = ba1.balance - amount;
-         ba2.balance -= amount;
+         ba2.balance = ba2.balance + amount;
      }
  }
