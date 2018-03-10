@@ -5,6 +5,7 @@
  */
 package gui;
 
+import software_project.BankingSystem;
 /**
  *
  * @author FT7673
@@ -12,6 +13,11 @@ package gui;
 public class TransferMoney extends javax.swing.JFrame {
 
     software_project.Customer cust = null;
+    software_project.CustomerFile file;
+    software_project.Banking_account ba1;
+    software_project.Banking_account ba2;
+    software_project.BankingSystem bs;
+    
     /**
      * Creates new form TransferMoney
      */
@@ -70,6 +76,11 @@ public class TransferMoney extends javax.swing.JFrame {
         });
 
         btnOK.setText("OK");
+        btnOK.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnOKActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -133,6 +144,18 @@ public class TransferMoney extends javax.swing.JFrame {
     private void fieldAmountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldAmountActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_fieldAmountActionPerformed
+
+    private void btnOKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOKActionPerformed
+        file.accountlist.get(2);
+        for( int i = 0 ; i < file.accountlist.size(); i++){
+        if( txtIBAN.getText().equals(file.accountlist.get(i))){
+            ba1 = file.accountlist.get(i);
+            String s = txtAmount.getText();
+            double amount = Double.parseDouble(s);
+            bs.transferMoney(ba1,ba2, amount);
+        }
+    }
+    }//GEN-LAST:event_btnOKActionPerformed
 
     /**
      * @param args the command line arguments

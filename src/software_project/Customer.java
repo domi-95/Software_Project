@@ -5,6 +5,7 @@
  */
 package software_project;
 
+import static java.util.Arrays.equals;
 import java.util.Scanner;
 
 /**
@@ -60,6 +61,15 @@ public class Customer extends Person{
 		 
 	}
         
-        
+        public boolean equals(Object o){
+            if (this == o){
+	return true;}
+            if ( o == null || this.getClass () != o.getClass()){
+	return false;}
+            Customer c = (Customer) o;
+            return this.id == c.id;
+            
+        }
+                
 }
 

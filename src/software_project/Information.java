@@ -38,14 +38,12 @@ public class Information {
        // for (int i = 0; i < Customer.class.getccounter(); i++){
             
         //}
-       new gui.InsertCard().setVisible(true);
        
        ATM inuse = new ATM (1500);                  // sollte GUI aufrufen
      
-        
-        System.out.println("bitch");
-       
 
+                
+        
         
     }
     
