@@ -12,12 +12,17 @@ import software_project.ATM;
  * @author FT7673
  */
 public class WithdrawCash extends javax.swing.JFrame {
-
+    
+    software_project.Customer cust = null;
     /**
      * Creates new form WithdrawCash
      */
     public WithdrawCash() {
         initComponents();
+    }
+    public WithdrawCash(software_project.Customer cust) {
+        initComponents();
+        this.cust = cust;
     }
 
     /**
@@ -109,11 +114,11 @@ public class WithdrawCash extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btn10eActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn10eActionPerformed
-        
+        cust.cashAmount = cust.cashAmount + 10;                                 // über Customer auf Bankaccount und dort noch abbuchen?!
     }//GEN-LAST:event_btn10eActionPerformed
 
     private void btndifferentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndifferentActionPerformed
-        WithdrawCashDifferent next = new WithdrawCashDifferent();
+        WithdrawCashDifferent next = new WithdrawCashDifferent(this.cust);
         this.setVisible(false);
         next.setVisible(true);
     }//GEN-LAST:event_btndifferentActionPerformed

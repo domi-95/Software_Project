@@ -6,6 +6,7 @@
 package gui;
 
 import javax.swing.JOptionPane;
+import software_project.CustomerFile;
 /**
  *
  * @author FT7673
@@ -85,30 +86,34 @@ public class PINCheck extends javax.swing.JFrame {
     private void btnOKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOKActionPerformed
        String PIN= fieldPIN.getText();
        int pw = Integer.parseInt(PIN);
-      // for( int i = 0; i < pin.length -1; i{                          // prüft das array auf alle pins wenn es was findet geht es zum Homescreen
-      //    if  pw == pin[i] {         
-      //    customerlist[i].cardins = true;                                 // anhand der Stelle im Array kann die Customer ID bestimmt werden
-      //     HomeScreen next = new HomeScreen();
-      //      this.setVisible(false);
-      //      next.setVisible(true);      
-      //}
-      //}
-       if ( pw == 2351) {						// Prüfung muss noch umgebaut werden, wenn Inhalt vorhanden
-             HomeScreen next = new HomeScreen();
+       boolean correct = true;
+  
+       for( int i = 0; i < CustomerFile.pin.length; i++){                          // prüft das array auf alle pins wenn es was findet geht es zum Homescreen
+         if  (pw == CustomerFile.pin[i]) {   
+             software_project.Customer help = CustomerFile.customerlist.get(1);
+             help.cardins = true;                                 // anhand der Stelle im Array kann die Customer ID bestimmt werden
+            HomeScreen next = new HomeScreen(help);
             this.setVisible(false);
-            next.setVisible(true);                  
-					
-					
-	}else if (counter ==2){
-            JOptionPane.showMessageDialog(null,"You entered your PIN wrong to often. Your card is going to be confiscated." );
+            next.setVisible(true);      
+            }
+         else{
+             correct = false;
+         }
+        }
+       if ( correct == false) {						// Prüfung muss noch umgebaut werden, wenn Inhalt vorhanden                  
+            if (counter ==2){
+                    JOptionPane.showMessageDialog(null,"You entered your PIN wrong to often. Your card is going to be confiscated." );
                                                                         //Karte einziehen durch PIN blockieren faken?
-            InsertCard back = new InsertCard();
-	}else{
+                     InsertCard back = new InsertCard();			
+            }
+	else{
             JOptionPane.showMessageDialog(null,"Entered PIN is incorrect. Please try again.");
             counter = counter +1;
             fieldPIN.setText("");
             PINCheck back = new PINCheck();
         }
+       }
+       
     }//GEN-LAST:event_btnOKActionPerformed
 
     private void fieldPINActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldPINActionPerformed

@@ -11,11 +11,16 @@ package gui;
  */
 public class TransferMoney extends javax.swing.JFrame {
 
+    software_project.Customer cust = null;
     /**
      * Creates new form TransferMoney
      */
     public TransferMoney() {
         initComponents();
+    }
+    public TransferMoney(software_project.Customer cust) {
+        initComponents();
+        this.cust = cust;
     }
 
     /**

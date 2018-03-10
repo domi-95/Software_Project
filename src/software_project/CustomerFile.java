@@ -12,12 +12,12 @@ import java.util.ArrayList;
  * @author FT7673
  */
 public class CustomerFile {
-   static ArrayList<Customer> customerlist= new ArrayList<Customer>();  
-   static ArrayList<Banking_account> accountlist = new ArrayList<Banking_account>();
-   static int pin[];
+   public static final ArrayList<Customer> customerlist= new ArrayList<Customer>();  
+   public static final ArrayList<Banking_account> accountlist = new ArrayList<Banking_account>();
+   public static int pin[];
    
    static{
-       customerlist.add(new Customer("Max",  1000 , 2351));
+       customerlist.add(new Customer("Max",1000,2351));
        accountlist.add(new Banking_account(customerlist.get(0), 051235, 3000.45));
        pin[0] = customerlist.get(0).getPin();
        customerlist.add (new Customer("Moritz",  50 , 1001));

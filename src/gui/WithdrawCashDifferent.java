@@ -11,11 +11,16 @@ package gui;
  */
 public class WithdrawCashDifferent extends javax.swing.JFrame {
 
+     software_project.Customer cust = null;
     /**
      * Creates new form WithdrawCashDifferent
      */
     public WithdrawCashDifferent() {
         initComponents();
+    }
+    public WithdrawCashDifferent(software_project.Customer cust) {
+        initComponents();
+        this.cust = cust;
     }
 
     /**

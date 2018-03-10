@@ -13,12 +13,17 @@ import javax.swing.JOptionPane;
  */
 public class HomeScreen extends javax.swing.JFrame {
 
+    software_project.Customer cust = null;
     /**
      * Creates new form HomeScreen
      */
     public HomeScreen() {
         initComponents();
-        // ATM muss auch inialisiert werden
+        
+    }
+     public HomeScreen(software_project.Customer cust) {
+        initComponents();
+        this.cust = cust;
     }
 
     /**
@@ -95,14 +100,14 @@ public class HomeScreen extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCashActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCashActionPerformed
-       WithdrawCash with = new WithdrawCash();
+       WithdrawCash with = new WithdrawCash(this.cust);
        this.setVisible(false);
        with.setVisible(true);
   
     }//GEN-LAST:event_btnCashActionPerformed
 
     private void btnTransferActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTransferActionPerformed
-       TransferMoney next = new TransferMoney();
+       TransferMoney next = new TransferMoney(this.cust);
        this.setVisible(false);
        next.setVisible(true);
     }//GEN-LAST:event_btnTransferActionPerformed
