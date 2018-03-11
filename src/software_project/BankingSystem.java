@@ -1,6 +1,7 @@
 package software_project;
 
 
+import javax.swing.JOptionPane;
 import software_project.Banking_account;
 
 public class BankingSystem{
@@ -20,8 +21,12 @@ public class BankingSystem{
          }
          return false;
      }
-     public static void transferMoney(Banking_account ba1, Banking_account ba2, double amount){
+     
+    
+     public void transferMoney(Banking_account ba1, Banking_account ba2, double amount){
          ba1.balance = ba1.balance - amount;
          ba2.balance = ba2.balance + amount;
+         JOptionPane.showMessageDialog(null, "You transfered the amount of " + amount + " Euros successfully to " + ba2.getCst().getName()+". Thank you.");
      }
+
  }

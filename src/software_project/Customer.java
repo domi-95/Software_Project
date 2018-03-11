@@ -17,7 +17,7 @@ public class Customer extends Person{
 	public int cashAmount;
 	public boolean cardins;
         public int pin;
-        String name;
+       
      
         public static int ccounter = 1;         // id of the customer
 	
@@ -35,8 +35,13 @@ public class Customer extends Person{
         public int getPin(){
             return pin;
         }
-        
-	public void insertBankingcard (ATM terminal, Banking_account ba){
+        @Override
+	public String getName (){
+           return super.getName();
+	}
+
+        /*
+	public void insertBankingcard (ATM terminal, Banking_account ba){           brauchen wir das überhaupt?
 		System.out.println("Do you insert your card(y/n)");
 		Scanner scanner = new Scanner(System.in);
 		String input = scanner.nextLine();
@@ -45,7 +50,7 @@ public class Customer extends Person{
                         terminal.activeBnr = ba.bnr;
 		}
 		cardins = false;
-	}
+	}*/
 	
 	public void takeBankingcard (){																				//card will be taken out.
 		cardins = false;

@@ -76,18 +76,7 @@ public class ATM {
 
 	
 }
-
-abstract class Person {                     // oder als interface deklarieren?
-	public int id;
-	public String name;
-	
-	
-	public Person(String name, int id){
-		this.id = id;
-		this.name =name;
-	}
-}
-
+ 
 class Manager extends Person{
 	
 	public Manager(String name, int pid){

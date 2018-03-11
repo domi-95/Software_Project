@@ -10,12 +10,12 @@ package software_project;
  * @author das
  */
 public class Banking_account{
-	int bnr;
+	String bnr;
 	double balance;
         int pin;
         Customer cst;
 	
-	public Banking_account(Customer cst, int bnr, double balance ){
+	public Banking_account(Customer cst, String bnr, double balance ){
 	this.bnr = bnr;
         pin = cst.pin;
 	this.balance = balance;
@@ -23,7 +23,7 @@ public class Banking_account{
 	}
         
 
-    public int getBnr() {
+    public String getBnr() {
         return bnr;
     }
 

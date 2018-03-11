@@ -5,6 +5,7 @@
  */
 package gui;
 
+import javax.swing.JOptionPane;
 import software_project.*;
 /**
  *
@@ -15,6 +16,7 @@ public class TransferMoney extends javax.swing.JFrame {
     Session s;
     BankingSystem bs;
     CustomerFile file;
+    boolean found = false;
     
     /**
      * Creates new form TransferMoney
@@ -155,16 +157,23 @@ public class TransferMoney extends javax.swing.JFrame {
     }//GEN-LAST:event_fieldAmountActionPerformed
 
     private void btnOKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOKActionPerformed
-       // file.accountlist.get(2);
-        for( int i = 0 ; i < file.accountlist.size(); i++){
-        if( fieldIBAN.getText().equals(file.accountlist.get(i))){
-            Banking_account from = s.getBank();
-            Banking_account to = file.accountlist.get(i);
-            String s = fieldAmount.getText();
-            double amount = Double.parseDouble(s);
-            bs.transferMoney(from, to, amount);
-        }
-    }
+       if(fieldIBAN.getText().equals(s.getBank().getBnr())){
+           JOptionPane.showMessageDialog(null, "You cannot transfer money to your own bank account.");
+           fieldIBAN.setText("");
+       }
+       for (Banking_account account : CustomerFile.accountlist){
+           if (fieldIBAN.getText().equals(account.getBnr())){
+               Banking_account to = account;
+               String samount = fieldAmount.getText();
+               double amount = Double.parseDouble(samount);
+               found = true;
+               bs.transferMoney(s.getBank(), to, amount);
+           }
+           if (found == false){
+               JOptionPane.showMessageDialog(null, "The inserted bank account number is not recognized. Please try again.");
+               fieldIBAN.setText("");
+           }
+       }
     }//GEN-LAST:event_btnOKActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
