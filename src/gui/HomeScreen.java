@@ -116,9 +116,9 @@ public class HomeScreen extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCashActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCashActionPerformed
-       WithdrawCash with = new WithdrawCash(s);
+       
        this.setVisible(false);
-       with.setVisible(true);
+       new gui.WithdrawCash(s).setVisible(true);
   
     }//GEN-LAST:event_btnCashActionPerformed
 

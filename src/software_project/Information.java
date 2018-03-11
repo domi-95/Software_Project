@@ -14,31 +14,7 @@ import java.util.Scanner;
  */
 public class Information {
     public static void main(String[] args) {
-        // TODO code application logic here
-        /*ArrayList<Customer> customer= new ArrayList<Customer>();              //unlimited how many customers are added
-        int[] pin = {};                                                             sollte durch CustomerFile abgedeckt sein
-
-        Customer max = new Customer("Max",  1000 , 2351);
-        Banking_account bama = new Banking_account( max, 051235, 3000.45);
-        customer.add(max);
-        pin[1] = max.getPin();
         
-        Customer moritz = new Customer("Moritz",  50 , 1001);
-        Banking_account bamo = new Banking_account( moritz, 0666, 30.50);
-        customer.add(moritz);
-        pin[2] = moritz.getPin();
-        
-        Customer lotta = new Customer("Lotta",  275 , 5678);
-        Banking_account balo = new Banking_account( lotta, 02345,4000.45);
-        customer.add(lotta);
-        pin[3] = lotta.getPin();
-        */
-       // customer.get();
-        
-       // for (int i = 0; i < Customer.class.getccounter(); i++){
-            
-        //}
-       
        //ATM inuse = new ATM (1500, "Kokkola");                  // sollte GUI aufrufen
        
        new gui.ChooseATM().setVisible(true);
