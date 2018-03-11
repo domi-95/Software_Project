@@ -20,8 +20,9 @@ public class CustomerFile {
    
    
    static{
-       customerlist.add(new Customer("Max",1000,2351));
-       accountlist.add(new Banking_account(customerlist.get(0), 051235, 3000.45));
+       Customer max = new Customer("Max",1000,2351);
+       customerlist.add(max);
+       accountlist.add(new Banking_account(max, 051235, 3000.45));
      
        customerlist.add (new Customer("Moritz",  50 , 1001));
        accountlist.add(new Banking_account(customerlist.get(1), 0666, 30.50));

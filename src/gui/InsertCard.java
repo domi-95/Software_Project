@@ -99,6 +99,7 @@ public class InsertCard extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         this.setVisible(false);
+        new gui.ChooseATM().setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

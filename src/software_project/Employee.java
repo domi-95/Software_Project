@@ -15,7 +15,7 @@ public class Employee extends Person{
 	}
 	public boolean refillATM (ATM terminal, int amount){																//Employee refills
 		terminal.cashAmount = terminal.cashAmount + amount;
-		if (terminal.checkCashAmount(terminal.cashAmount) == true){
+		if (terminal.checkCashAmount() == true){
 			terminal.usable = true;																					// ATM is usable again
 			return true;
 		}else{

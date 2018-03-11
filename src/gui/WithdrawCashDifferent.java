@@ -112,7 +112,7 @@ public class WithdrawCashDifferent extends javax.swing.JFrame {
        ATM term = s.getTerminal();
        acc.getCst().withdrawCash(amount, term, acc);
        
-       JOptionPane.showMessageDialog(null, "Bitte entnehmen sie ihre " + amount + " €" , "Meldung", JOptionPane.INFORMATION_MESSAGE);
+        System.out.println(term.getCashAmount());
     }//GEN-LAST:event_btnOKActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

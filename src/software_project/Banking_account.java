@@ -19,6 +19,7 @@ public class Banking_account{
 	this.bnr = bnr;
         pin = cst.pin;
 	this.balance = balance;
+        this.cst = cst;
 	}
         
 

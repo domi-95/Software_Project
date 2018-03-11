@@ -28,7 +28,7 @@ public class ATM {
                 this.location = location;
                 this.serialNumber = atmCounter;
                 atmCounter = atmCounter +1;
-		this.checkCashAmount(cashAmount);
+		this.checkCashAmount();
                // new gui.InsertCard().setVisible(true);
 		
 	}
@@ -63,8 +63,8 @@ public class ATM {
 	
 	
 	
-	public boolean checkCashAmount(int amount) {
-		if (amount < 100){
+	public boolean checkCashAmount() {
+		if (cashAmount < 100){
 			JOptionPane.showMessageDialog(null,"Cash Amount is getting low. It needs to be refilled.");	//Informationsfeld am Bildschirm
 			usable = false; 																		// blockiert den ATM wenn zu wenig Cash
 			return false;

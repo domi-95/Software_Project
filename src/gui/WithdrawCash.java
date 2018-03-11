@@ -133,7 +133,6 @@ public class WithdrawCash extends javax.swing.JFrame {
         Customer cust = acc.getCst();
         ATM term = s.getTerminal();
         cust.withdrawCash(10, term, acc); 
-        JOptionPane.showMessageDialog(null, "Entnehmen sie ihre 10 €", "Meldung", JOptionPane.INFORMATION_MESSAGE ); 
     
     }//GEN-LAST:event_btn10eActionPerformed
 
