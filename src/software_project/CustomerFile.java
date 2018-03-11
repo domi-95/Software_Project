@@ -30,9 +30,9 @@ public class CustomerFile {
        customerlist.add(new Customer ("Lotta",  275 , 5678));
        accountlist.add(new Banking_account(customerlist.get(2), 02345,4000.45));
        
-       ATMlist.add(new ATM(1000, "Kokkola"));
-       ATMlist.add(new ATM(1500, "Tampere"));
-       ATMlist.add(new ATM(1250, "Helsinki"));
+       ATMlist.add(new ATM(10000, "Kokkola"));
+       ATMlist.add(new ATM(15000, "Tampere"));
+       ATMlist.add(new ATM(12500, "Helsinki"));
       
        
    }

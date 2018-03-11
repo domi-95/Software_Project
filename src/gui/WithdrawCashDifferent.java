@@ -111,8 +111,6 @@ public class WithdrawCashDifferent extends javax.swing.JFrame {
        Banking_account acc = s.getBank();
        ATM term = s.getTerminal();
        acc.getCst().withdrawCash(amount, term, acc);
-       
-        System.out.println(term.getCashAmount());
     }//GEN-LAST:event_btnOKActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

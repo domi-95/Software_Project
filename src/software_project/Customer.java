@@ -56,16 +56,19 @@ public class Customer extends Person{
 	}
         
         public void withdrawCash(int amount, ATM terminal, Banking_account ba){
+            BankingSystem bs = null;
             terminal.checkCashAmount();
             if( terminal.cashAmount <= amount){
                 JOptionPane.showMessageDialog(null,"There is not enough money in the ATM to fullfill your request.");
             }
             else
             {
+                if(bs.checkAccount(ba, amount) == true){
 		cashAmount = cashAmount + amount;	
                 ba.balance = ba.balance - (double) amount;
                 JOptionPane.showMessageDialog(null,"The money on your account has been decreased by " + amount + "Euros and is now " + ba.balance + ".");
-		terminal.cashAmount = terminal.cashAmount - amount;													// changes Customer Cash Amount
+		terminal.cashAmount = terminal.cashAmount - amount;	
+                }                       
             }
                 															// controls if enough Cash is left
 	

@@ -13,15 +13,8 @@ public class Employee extends Person{
 	public Employee(String name, int pid){
 		super(name,pid);
 	}
-	public boolean refillATM (ATM terminal, int amount){																//Employee refills
+	public static void refillATM (ATM terminal, int amount){																//Employee refills
 		terminal.cashAmount = terminal.cashAmount + amount;
-		if (terminal.checkCashAmount() == true){
-			terminal.usable = true;																					// ATM is usable again
-			return true;
-		}else{
-			amount = (terminal.cashAmount -1000)*-1;
-			refillATM(terminal,amount );																			// Recursion
-		}
-		return true;				
+		
 	}
 }

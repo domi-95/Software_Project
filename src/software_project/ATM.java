@@ -18,13 +18,11 @@ public class ATM {
 	int cashAmount;
         String location;
 	int serialNumber;
-        static int atmCounter = 1;
-	boolean usable;								// hab ich eingefügt um den ATM sperren zu können
+        static int atmCounter = 1;						
         int activeBnr;
         
 	public ATM (int amount, String location){
 		this.cashAmount = amount;
-		this.usable = true;
                 this.location = location;
                 this.serialNumber = atmCounter;
                 atmCounter = atmCounter +1;
@@ -53,22 +51,21 @@ public class ATM {
         return atmCounter;
     }
 
-    public boolean isUsable() {
-        return usable;
-    }
-
     public int getActiveBnr() {
         return activeBnr;
     }
 	
 	
 	
-	public boolean checkCashAmount() {
-		if (cashAmount < 100){
-			JOptionPane.showMessageDialog(null,"Cash Amount is getting low. It needs to be refilled.");	//Informationsfeld am Bildschirm
-			usable = false; 																		// blockiert den ATM wenn zu wenig Cash
-			return false;
-		}return true;
+	public void checkCashAmount() {
+		if (cashAmount < 1000){
+			JOptionPane.showMessageDialog(null,"Cash Amount is getting low. It needs to be refilled. Please call an employee");	//Informationsfeld am Bildschirm
+                        String s = JOptionPane.showInputDialog(null,"How much will you fill into the ATM?");
+                        int mon = Integer.parseInt(s);
+                        Employee e = null;
+                        
+                        e.refillATM(this, mon);
+		}
 		
 	}
         
