@@ -5,11 +5,13 @@
  */
 package software_project;
 
+
 /**
  *
  * @author das
  */
 public class Banking_account{
+   
 	String bnr;
 	double balance;
         int pin;
@@ -38,6 +40,10 @@ public class Banking_account{
     public Customer getCst() {
         return cst;
     }
+
+   
         
+    
+    
         
 }

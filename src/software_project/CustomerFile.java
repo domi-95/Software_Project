@@ -13,6 +13,14 @@ import sun.applet.Main;
  * @author FT7673
  */
 public class CustomerFile {
+    
+    public static void main(String[] args) {
+        
+        System.out.println(accountlist);
+                
+        
+        
+    }
   
    public static ArrayList<Customer> customerlist= new ArrayList<Customer>();  
    public static  ArrayList<Banking_account> accountlist = new ArrayList<Banking_account>();

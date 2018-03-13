@@ -5,7 +5,9 @@
  */
 package gui;
 
+import javax.swing.JFormattedTextField;
 import javax.swing.JOptionPane;
+import javax.swing.text.NumberFormatter;
 import software_project.*;
 /**
  *
@@ -14,7 +16,7 @@ import software_project.*;
 public class TransferMoney extends javax.swing.JFrame {
 
     Session s;
-    BankingSystem bs;
+    BankingSystem bs = new BankingSystem(101);
     CustomerFile file;
     boolean found = false;
     
@@ -144,6 +146,7 @@ public class TransferMoney extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    
     private void fieldNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldNameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_fieldNameActionPerformed
@@ -157,7 +160,7 @@ public class TransferMoney extends javax.swing.JFrame {
     }//GEN-LAST:event_fieldAmountActionPerformed
 
     private void btnOKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOKActionPerformed
-       if(fieldIBAN.getText().equals(s.getBank().getBnr())){
+          if(fieldIBAN.getText().equals(s.getBank().getBnr())){
            JOptionPane.showMessageDialog(null, "You cannot transfer money to your own bank account.");
            fieldIBAN.setText("");
        }
@@ -169,11 +172,11 @@ public class TransferMoney extends javax.swing.JFrame {
                found = true;
                bs.transferMoney(s.getBank(), to, amount);
            }
-           if (found == false){
+       }
+         if (found == false){
                JOptionPane.showMessageDialog(null, "The inserted bank account number is not recognized. Please try again.");
                fieldIBAN.setText("");
            }
-       }
     }//GEN-LAST:event_btnOKActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
