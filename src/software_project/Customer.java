@@ -73,7 +73,10 @@ public class Customer extends Person{
                 ba.balance = ba.balance - (double) amount;
                 JOptionPane.showMessageDialog(null,"The money on your account has been decreased by " + amount + "Euros and is now " + ba.balance + ".");
 		terminal.cashAmount = terminal.cashAmount - amount;	
-                }                       
+                }   
+                else{
+                  JOptionPane.showMessageDialog(null,"There is not enough money on the account");  
+                }
             }
                 															// controls if enough Cash is left
 	
