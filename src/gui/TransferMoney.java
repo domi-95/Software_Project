@@ -160,23 +160,34 @@ public class TransferMoney extends javax.swing.JFrame {
     }//GEN-LAST:event_fieldAmountActionPerformed
 
     private void btnOKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOKActionPerformed
-          if(fieldIBAN.getText().equals(s.getBank().getBnr())){
-           JOptionPane.showMessageDialog(null, "You cannot transfer money to your own bank account.");
-           fieldIBAN.setText("");
-       }
-       for (Banking_account account : CustomerFile.accountlist){
-           if (fieldIBAN.getText().equals(account.getBnr())){
+         try{
+             if(fieldIBAN.getText().equals(s.getBank().getBnr())){
+                JOptionPane.showMessageDialog(null, "You cannot transfer money to your own bank account.");
+                 fieldIBAN.setText("");
+             }   
+            for (Banking_account account : CustomerFile.accountlist){
+                if (fieldIBAN.getText().equals(account.getBnr())){
                Banking_account to = account;
                String samount = fieldAmount.getText();
                double amount = Double.parseDouble(samount);
                found = true;
                bs.transferMoney(s.getBank(), to, amount);
            }
-       }
-         if (found == false){
+             }
+                if (found == false){
                JOptionPane.showMessageDialog(null, "The inserted bank account number is not recognized. Please try again.");
                fieldIBAN.setText("");
            }
+             
+         
+         }
+         catch(NumberFormatException e){
+             JOptionPane.showMessageDialog(null, "Your entered amount was not a valid number. Please try again.");
+           
+           
+         }
+        
+
     }//GEN-LAST:event_btnOKActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
