@@ -15,7 +15,6 @@ import javax.swing.JOptionPane;
  */
 public class Customer extends Person{
 	public int cashAmount;
-	public boolean cardins;
         public int pin;
        
      
@@ -25,7 +24,6 @@ public class Customer extends Person{
 		super(name,ccounter);
                 this.pin = pin;
 		this.cashAmount = cashAmount;
-		cardins = false;
                 ccounter = ccounter +1;
                 
 	}
@@ -51,10 +49,7 @@ public class Customer extends Person{
 		}
 		cardins = false;
 	}*/
-	
-	public void takeBankingcard (){																				//card will be taken out.
-		cardins = false;
-	}
+
 	
 	public void enterPin(int pin){					//brauchen wir das?															// pin for the right account
 		

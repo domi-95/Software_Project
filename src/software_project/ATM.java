@@ -70,7 +70,6 @@ public class ATM {
 	}
         
         public void discardBankingscard(Customer name){
-            name.takeBankingcard();
             activeBnr = 0;
         }
 

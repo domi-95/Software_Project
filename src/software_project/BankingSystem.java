@@ -15,7 +15,7 @@ public class BankingSystem{
          System.out.println( ba.balance);
      }
      
-     public boolean checkAccount(Banking_account ba, int amount){
+     static public boolean checkAccount(Banking_account ba, int amount){
          if(ba.balance - (double) amount > 0){
              return true;
          }
