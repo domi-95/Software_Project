@@ -15,11 +15,15 @@ public class BankingSystem{
          System.out.println( ba.balance);
      }
      
-     static public boolean checkAccount(Banking_account ba, int amount){
+     public boolean checkAccount(Banking_account ba, double amount){
          if(ba.balance - (double) amount > 0){
              return true;
+         }else{
+             JOptionPane.showMessageDialog(null,"The choosen amount is too high and overdraws your account. Please choose a smaller amount.");
+             return false;
          }
-         return false;
+         
+         
      }
      
     

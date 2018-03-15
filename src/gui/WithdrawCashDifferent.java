@@ -106,11 +106,16 @@ public class WithdrawCashDifferent extends javax.swing.JFrame {
     }//GEN-LAST:event_fieldAmountActionPerformed
 
     private void btnOKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOKActionPerformed
-       String text= fieldAmount.getText();
+      try{
+        String text= fieldAmount.getText();
        int amount = Integer.parseInt(text);
        Banking_account acc = s.getBank();
        ATM term = s.getTerminal();
        acc.getCst().withdrawCash(amount, term, acc);
+      }
+       catch(NumberFormatException e){
+             JOptionPane.showMessageDialog(null, "Your entered amount was not a valid number. Please try again by entering an Integer value.");
+       }     
     }//GEN-LAST:event_btnOKActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

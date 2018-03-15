@@ -93,7 +93,7 @@ public class ChooseATM extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnKokkolaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKokkolaActionPerformed
-        for(ATM a : CustomerFile.ATMlist){
+        for(ATM a : ATMRegister.ATMlist){
             if (a.getLocation().equals("Kokkola")){
                 s = new Session (a, null);
             }
@@ -104,7 +104,7 @@ public class ChooseATM extends javax.swing.JFrame {
     }//GEN-LAST:event_btnKokkolaActionPerformed
 
     private void btnTampereActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTampereActionPerformed
-         for(ATM a : CustomerFile.ATMlist){
+         for(ATM a : ATMRegister.ATMlist){
             if (a.getLocation().equals("Tampere")){
                 s = new Session (a, null);
             }
@@ -115,7 +115,7 @@ public class ChooseATM extends javax.swing.JFrame {
     }//GEN-LAST:event_btnTampereActionPerformed
 
     private void btnHelsinkiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHelsinkiActionPerformed
-         for(ATM a : CustomerFile.ATMlist){
+         for(ATM a : ATMRegister.ATMlist){
             if (a.getLocation().equals("Helsinki")){
                   s = new Session (a, null);
             }

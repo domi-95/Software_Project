@@ -171,7 +171,10 @@ public class TransferMoney extends javax.swing.JFrame {
                String samount = fieldAmount.getText();
                double amount = Double.parseDouble(samount);
                found = true;
-               bs.transferMoney(s.getBank(), to, amount);
+               if (bs.checkAccount(s.getBank(), amount) == true){
+                    bs.transferMoney(s.getBank(), to, amount);
+               };
+              
            }
              }
                 if (found == false){

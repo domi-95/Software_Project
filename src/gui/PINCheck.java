@@ -103,13 +103,11 @@ public class PINCheck extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnOKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOKActionPerformed
-       String PIN= fieldPIN.getText();
-       int pw = Integer.parseInt(PIN);
        boolean correct = false;
        
           
            for (Banking_account b : CustomerFile.accountlist){
-               if (b.getPin() == pw){
+               if (b.getPin().equals(fieldPIN)){
                    s.setBank(b);
                     HomeScreen next = new HomeScreen(s);
                this.setVisible(false);
@@ -118,7 +116,7 @@ public class PINCheck extends javax.swing.JFrame {
                }
            }
             
-           if (correct = false){
+           if (correct == false){
            				         
             if (counter ==2){
                     JOptionPane.showMessageDialog(null,"You entered your PIN wrong to often. Your card is going to be confiscated." );

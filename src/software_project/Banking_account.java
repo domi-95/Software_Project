@@ -14,7 +14,7 @@ public class Banking_account{
    
 	String bnr;
 	double balance;
-        int pin;
+        String pin;
         Customer cst;
 	
 	public Banking_account(Customer cst, String bnr, double balance ){
@@ -33,7 +33,7 @@ public class Banking_account{
         return balance;
     }
 
-    public int getPin() {
+    public String getPin() {
         return pin;
     }
 

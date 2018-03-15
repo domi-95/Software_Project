@@ -15,12 +15,12 @@ import javax.swing.JOptionPane;
  */
 public class Customer extends Person{
 	public int cashAmount;
-        public int pin;
+        public String pin;
        
      
         public static int ccounter = 1;         // id of the customer
 	
-	public Customer(String name, int cashAmount, int pin){
+	public Customer(String name, int cashAmount, String pin){
 		super(name,ccounter);
                 this.pin = pin;
 		this.cashAmount = cashAmount;
@@ -30,7 +30,7 @@ public class Customer extends Person{
         public int getccounter(){
             return ccounter;
         }
-        public int getPin(){
+        public String getPin(){
             return pin;
         }
         @Override
