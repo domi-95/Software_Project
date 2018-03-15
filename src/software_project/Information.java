@@ -5,8 +5,11 @@
  */
 package software_project;
 
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -17,9 +20,20 @@ public class Information {
         
        //ATM inuse = new ATM (1500, "Kokkola");                  // sollte GUI aufrufen
        
-       new gui.ChooseATM().setVisible(true);
+     //  new gui.ChooseATM().setVisible(true);
      
-
+        try {
+            //InputStream f = new FileInputStream("C:\\Users\\das\\Documents\\NetBeansProjects\\Software_Project\\src\\software_project\\Test.txt");
+            InputStream f = new FileInputStream("src/software_project/Test.txt");
+            int size = f.available();
+            for(int i = 0; i < size; i++) {
+            System.out.print((char)f.read() + "  ");
+         }
+            f.close();
+        } catch (IOException e) {
+            System.out.print("Exception");
+        }
+ 
                 
         
         
