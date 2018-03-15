@@ -116,7 +116,7 @@ public class PINCheck extends javax.swing.JFrame {
        
           
            for (Banking_account b : CustomerFile.accountlist){
-               if (b.getPin().equals(fieldPIN)){
+               if (b.getPin().equals(fieldPIN.getText())){
                    s.setBank(b);
                     HomeScreen next = new HomeScreen(s);
                this.setVisible(false);
