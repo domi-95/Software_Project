@@ -14,7 +14,7 @@ package software_project;
 
 import javax.swing.JOptionPane;
 
-public class ATM {
+public class ATM implements Bankmachine{
 	int cashAmount;
         String location;
 	int serialNumber;

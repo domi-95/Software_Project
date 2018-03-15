@@ -9,7 +9,7 @@ package software_project;
  *
  * @author FT7673
  */
-public class Person {
+public abstract class Person {
                        
 	public int id;
 	public String name;
