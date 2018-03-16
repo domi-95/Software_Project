@@ -17,7 +17,7 @@ public class TransferMoney extends javax.swing.JFrame {
 
     Session s;
     BankingSystem bs = new BankingSystem(101);
-    CustomerFile file;
+    InstancesFile file;
     boolean found = false;
     
     /**
@@ -175,7 +175,7 @@ public class TransferMoney extends javax.swing.JFrame {
                 JOptionPane.showMessageDialog(null, "You cannot transfer money to your own bank account.");
                  fieldIBAN.setText("");
              }   
-            for (Banking_account account : CustomerFile.accountlist){
+            for (Banking_account account : InstancesFile.accountlist){
                 if (fieldIBAN.getText().equals(account.getBnr())){
                Banking_account to = account;
                String samount = fieldAmount.getText();

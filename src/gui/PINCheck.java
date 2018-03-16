@@ -8,7 +8,7 @@ package gui;
 import java.awt.List;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
-import software_project.CustomerFile;
+import software_project.InstancesFile;
 import software_project.*;
 /**
  *
@@ -115,7 +115,7 @@ public class PINCheck extends javax.swing.JFrame {
        boolean correct = false;
        
           
-           for (Banking_account b : CustomerFile.accountlist){
+           for (Banking_account b : InstancesFile.accountlist){
                if (b.getPin().equals(fieldPIN.getText())){
                    s.setBank(b);
                     HomeScreen next = new HomeScreen(s);

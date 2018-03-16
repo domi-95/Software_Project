@@ -12,7 +12,7 @@ import sun.applet.Main;
  *
  * @author FT7673
  */
-public class CustomerFile {
+public class InstancesFile {
     
     public static void main(String[] args) {
         
@@ -28,14 +28,9 @@ public class CustomerFile {
    
    
    static{
-       Customer max = new Customer("Max",1000,"2351");
-       customerlist.add(max);
-       accountlist.add(new Banking_account(max, "051235", 3000.45));
-     
-       customerlist.add (new Customer("Moritz",  50 , "1001"));
+       
+       accountlist.add(new Banking_account(customerlist.get(0), "051235", 3000.45));
        accountlist.add(new Banking_account(customerlist.get(1), "0666", 30.50));
-      
-       customerlist.add(new Customer ("Lotta",  275 , "5678"));
        accountlist.add(new Banking_account(customerlist.get(2), "02345",4000.45));
        
        ATMlist.add(new ATM(10000, "Kokkola"));

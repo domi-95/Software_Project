@@ -11,6 +11,7 @@ import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+
 /**
  *
  * @author FT7673
@@ -18,23 +19,34 @@ import java.util.logging.Logger;
 public class Information {
     public static void main(String[] args) {
         
-       //ATM inuse = new ATM (1500, "Kokkola");                  // sollte GUI aufrufen
        
-     //  new gui.ChooseATM().setVisible(true);
      
         try {
-            //InputStream f = new FileInputStream("C:\\Users\\das\\Documents\\NetBeansProjects\\Software_Project\\src\\software_project\\Test.txt");
-            InputStream f = new FileInputStream("src/software_project/Test.txt");
-            int size = f.available();
-            for(int i = 0; i < size; i++) {
-            System.out.print((char)f.read());
+              Scanner s = new Scanner(new File("src/software_project/CustomerFile.txt"));
+            
+            
+            while(s.hasNextLine()){
+               
+                String help = s.nextLine();
+                String [] help1 = help.split(",");
+                String namehelp = help1[0];
+                int cashhelp = Integer.parseInt(help1[1]);
+                String pinhelp = help1[2];
+                InstancesFile.customerlist.add(new Customer(namehelp,cashhelp, pinhelp));
+            }
+           
          }
-            f.close();
-        } catch (IOException e) {
+          
+        catch (FileNotFoundException e){
             System.out.print("Exception");
         }
  
                 
+        for (int i = 0; i< InstancesFile.customerlist.size(); i++){
+            System.out.println(InstancesFile.customerlist.get(i));
+               
+                    
+        }
         
         
     }
