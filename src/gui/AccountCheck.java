@@ -77,8 +77,9 @@ public class AccountCheck extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
                                 .addComponent(jLabel2)
-                                .addGap(54, 54, 54)
+                                .addGap(44, 44, 44)
                                 .addComponent(txtBalance))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(147, 147, 147)
@@ -100,8 +101,10 @@ public class AccountCheck extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(43, 43, 43)
                         .addComponent(txtBalance))
-                    .addComponent(jLabel2))
-                .addGap(35, 35, 35)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel2)))
+                .addGap(24, 24, 24)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtEuro)
                     .addComponent(jLabel1))
@@ -122,7 +125,8 @@ public class AccountCheck extends javax.swing.JFrame {
     }//GEN-LAST:event_btnReturnActionPerformed
 
     private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
-        InsertCard next = new InsertCard();
+        s.getTerminal().discardBankingscard(s);
+        ChooseATM next = new ChooseATM();
         this.setVisible(false);
         next.setVisible(true);
     }//GEN-LAST:event_btnLogoutActionPerformed

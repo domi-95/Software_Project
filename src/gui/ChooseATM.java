@@ -15,6 +15,7 @@ public class ChooseATM extends javax.swing.JFrame {
 
     ATM terminal;
     Session s;
+    BankingSystem system = new BankingSystem(101);
     /**
      * Creates new form ChooseATM
      */
@@ -36,7 +37,7 @@ public class ChooseATM extends javax.swing.JFrame {
         btnKokkola = new javax.swing.JButton();
         btnTampere = new javax.swing.JButton();
         btnHelsinki = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        logo = new javax.swing.JLabel();
 
         jLabel2.setText("jLabel2");
 
@@ -65,7 +66,7 @@ public class ChooseATM extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui/BoF.png"))); // NOI18N
+        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui/BoF.png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -80,7 +81,7 @@ public class ChooseATM extends javax.swing.JFrame {
                             .addComponent(btnTampere, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
                             .addComponent(btnHelsinki, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addGap(48, 48, 48)
-                        .addComponent(jLabel1))
+                        .addComponent(logo))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(148, 148, 148)
                         .addComponent(txtChooseATM)))
@@ -93,7 +94,7 @@ public class ChooseATM extends javax.swing.JFrame {
                 .addComponent(txtChooseATM)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1)
+                        .addComponent(logo)
                         .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
                         .addGap(34, 34, 34)
@@ -111,7 +112,7 @@ public class ChooseATM extends javax.swing.JFrame {
     private void btnKokkolaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKokkolaActionPerformed
         for(ATM a : ATMRegister.ATMlist){
             if (a.getLocation().equals("Kokkola")){
-                s = new Session (a, null);
+                s = new Session (a, null, system);
             }
         }
         InsertCard next = new InsertCard(s);
@@ -122,7 +123,7 @@ public class ChooseATM extends javax.swing.JFrame {
     private void btnTampereActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTampereActionPerformed
          for(ATM a : ATMRegister.ATMlist){
             if (a.getLocation().equals("Tampere")){
-                s = new Session (a, null);
+                s = new Session (a, null, system);
             }
         }
          InsertCard next = new InsertCard(s);
@@ -133,7 +134,7 @@ public class ChooseATM extends javax.swing.JFrame {
     private void btnHelsinkiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHelsinkiActionPerformed
          for(ATM a : ATMRegister.ATMlist){
             if (a.getLocation().equals("Helsinki")){
-                  s = new Session (a, null);
+                  s = new Session (a, null, system);
             }
         }
          InsertCard next = new InsertCard(s);
@@ -180,8 +181,8 @@ public class ChooseATM extends javax.swing.JFrame {
     private javax.swing.JButton btnHelsinki;
     private javax.swing.JButton btnKokkola;
     private javax.swing.JButton btnTampere;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel logo;
     private javax.swing.JLabel txtChooseATM;
     // End of variables declaration//GEN-END:variables
 }

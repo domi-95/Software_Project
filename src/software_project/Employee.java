@@ -1,14 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+//Employye is entitled to refill the ATM when it runs out of cash
 package software_project;
 
-/**
- *
- * @author das
- */
+
 public class Employee extends Person{
 	public Employee(String name, int pid){
 		super(name,pid);

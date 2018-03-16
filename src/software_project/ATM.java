@@ -1,25 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+// creates the ATM which the customer interacts with
+
 package software_project;
 
-/**
- *
- * @author FT7673
- */
-
-    import java.util.Scanner;
 
 import javax.swing.JOptionPane;
 
-public class ATM implements Bankmachine{
+public final class ATM implements Bankmachine{
 	int cashAmount;
         String location;
 	int serialNumber;
         static int atmCounter = 1;						
-        int activeBnr;
+        
         
 	public ATM (int amount, String location){
 		this.cashAmount = amount;
@@ -27,17 +18,8 @@ public class ATM implements Bankmachine{
                 this.serialNumber = atmCounter;
                 atmCounter = atmCounter +1;
 		this.checkCashAmount();
-               // new gui.InsertCard().setVisible(true);
 		
-	}
-	/*
-	public void setAmount (int amount) { 			würde ich raus nehmen
-		cashAmount = amount;
-	}*/
-
-    public int getCashAmount() {
-        return cashAmount;
-    }
+        }
 
     public String getLocation() {
         return location;
@@ -46,21 +28,10 @@ public class ATM implements Bankmachine{
     public int getSerialNumber() {
         return serialNumber;
     }
-
-    public static int getAtmCounter() {
-        return atmCounter;
-    }
-
-    public int getActiveBnr() {
-        return activeBnr;
-    }
-	
-	
-	
-	public void checkCashAmount() {
+   public void checkCashAmount() {
 		if (cashAmount < 1000){
 			JOptionPane.showMessageDialog(null,"Cash Amount is getting low. It needs to be refilled. Please call an employee");	//Informationsfeld am Bildschirm
-                        String s = JOptionPane.showInputDialog(null,"How much will you fill into the ATM?");
+                        String s = JOptionPane.showInputDialog(null,"Question for the employee: How much will you fill into the ATM?");
                         int mon = Integer.parseInt(s);
                         Employee e = null;
                         
@@ -69,8 +40,9 @@ public class ATM implements Bankmachine{
 		
 	}
         
-        public void discardBankingscard(Customer name){
-            activeBnr = 0;
+        public void discardBankingscard(Session s){
+            s = null;
+            JOptionPane.showMessageDialog(null,"Please take your card.");
         }
 
 	

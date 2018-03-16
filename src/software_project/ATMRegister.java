@@ -1,20 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+// Container Class to organize ATMs
 package software_project;
 
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author FT7673
- */
+
 public class ATMRegister {
-    //arrayslist muss hier rein
-    // add und entfernen muss möglich sein getInfo
+    
     
     public static ArrayList<ATM> ATMlist = new ArrayList<ATM>();
     
@@ -38,7 +30,7 @@ public class ATMRegister {
         for (int i = 0; i < ATMlist.size(); i++){
             ATM help = ATMlist.get(i);
             
-            if (help.serialNumber== number ){
+            if (help.getSerialNumber()== number ){
                 ATMlist.remove(i);
                 JOptionPane.showMessageDialog(null,"The chosen ATM is deleted.");
                 return true;
