@@ -1,4 +1,4 @@
-z/*
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -113,7 +113,6 @@ public class PINCheck extends javax.swing.JFrame {
 
     private void btnOKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOKActionPerformed
        boolean correct = false;
-       System.out.println(fieldPIN.getText());
           
            for (Banking_account b : InstancesFile.accountlist){
                if (b.getPin().equals(fieldPIN.getText())){

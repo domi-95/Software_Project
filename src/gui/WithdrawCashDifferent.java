@@ -121,7 +121,8 @@ public class WithdrawCashDifferent extends javax.swing.JFrame {
        int amount = Integer.parseInt(text);
        Banking_account acc = s.getBank();
        ATM term = s.getTerminal();
-       acc.getCst().withdrawCash(amount, term, acc);
+       if(acc.getCst().withdrawCash(amount, term, acc)==true)
+       new gui.HomeScreen(s).setVisible(true);
       }
        catch(NumberFormatException e){
              JOptionPane.showMessageDialog(null, "Your entered amount was not a valid number. Please try again by entering an Integer value.");

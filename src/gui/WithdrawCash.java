@@ -138,7 +138,8 @@ public class WithdrawCash extends javax.swing.JFrame {
         Banking_account acc = s.getBank();
         Customer cust = acc.getCst();
         ATM term = s.getTerminal();
-        cust.withdrawCash(10, term, acc); 
+        if(acc.getCst().withdrawCash(10, term, acc)==true) 
+        new gui.HomeScreen(s).setVisible(true);
     
     }//GEN-LAST:event_btn10eActionPerformed
 
@@ -152,14 +153,16 @@ public class WithdrawCash extends javax.swing.JFrame {
        Banking_account acc = s.getBank();
         Customer cust = acc.getCst();
         ATM term = s.getTerminal();
-        cust.withdrawCash(100, term, acc);        
+        if(acc.getCst().withdrawCash(100, term, acc)==true)    
+        new gui.HomeScreen(s).setVisible(true);
     }//GEN-LAST:event_btn100eActionPerformed
 
     private void btn50eActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn50eActionPerformed
        Banking_account acc = s.getBank();
         Customer cust = acc.getCst();
         ATM term = s.getTerminal();
-        cust.withdrawCash(50, term, acc);      
+        if(acc.getCst().withdrawCash(50, term, acc)==true)      
+        new gui.HomeScreen(s).setVisible(true);
     }//GEN-LAST:event_btn50eActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
