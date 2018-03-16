@@ -122,6 +122,7 @@ public class WithdrawCashDifferent extends javax.swing.JFrame {
        Banking_account acc = s.getBank();
        ATM term = s.getTerminal();
        if(acc.getCst().withdrawCash(amount, term, acc)==true)
+       this.setVisible(false);
        new gui.HomeScreen(s).setVisible(true);
       }
        catch(NumberFormatException e){
