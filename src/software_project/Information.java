@@ -27,7 +27,7 @@ public class Information {
             InputStream f = new FileInputStream("src/software_project/Test.txt");
             int size = f.available();
             for(int i = 0; i < size; i++) {
-            System.out.print((char)f.read() + "  ");
+            System.out.print((char)f.read());
          }
             f.close();
         } catch (IOException e) {
