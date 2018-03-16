@@ -170,6 +170,8 @@ public class TransferMoney extends javax.swing.JFrame {
                     s.getSystem().transferMoney(s.getBank(), to, amount);
                     this.setVisible(false);
                    new gui.HomeScreen(s).setVisible(true);
+               }else{
+                   fieldAmount.setText("");
                }
               
            }
