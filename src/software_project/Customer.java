@@ -9,6 +9,15 @@ public class Customer extends Person{
         private String pin;
         private static int ccounter = 1;         // ID of the customer
 	
+        
+        public Customer(String name, String pin){
+            super(name,ccounter);
+            this.pin = pin;
+            cashAmount = 0;
+            ccounter = ccounter +1;
+        }
+        
+        
 	public Customer(String name, int cashAmount, String pin){
 		super(name,ccounter);
                 this.pin = pin;
