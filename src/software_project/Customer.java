@@ -5,9 +5,9 @@ import javax.swing.JOptionPane;
 
 
 public class Customer extends Person{
-	public int cashAmount;
-        public String pin;
-        public static int ccounter = 1;         // ID of the customer
+	private int cashAmount;
+        private String pin;
+        private static int ccounter = 1;         // ID of the customer
 	
 	public Customer(String name, int cashAmount, String pin){
 		super(name,ccounter);
@@ -17,15 +17,19 @@ public class Customer extends Person{
                 
 	}
        
-        @Override
-	public String getName (){
-           return super.getName();
-	}
+    @Override
+    public String getName (){
+        return super.getName();
+    }
+
+    public String getPin() {
+        return pin;
+    }
         
         public boolean withdrawCash(int amount, ATM terminal, Banking_account ba, Session s){
             
             terminal.checkCashAmount();
-            if( terminal.cashAmount <= amount){
+            if( terminal.getCashAmount() <= amount){
                 JOptionPane.showMessageDialog(null,"There is not enough money in the ATM to fullfill your request.");
                 return false;
             }
@@ -34,9 +38,9 @@ public class Customer extends Person{
                 
                 if(s.getSystem().checkAccount(ba, amount) == true){
 		cashAmount = cashAmount + amount;	
-                ba.balance = ba.balance - (double) amount;
-                JOptionPane.showMessageDialog(null,"The money on your account has been decreased by " + amount + " Euros and is now " + ba.balance + ".");
-		terminal.cashAmount = terminal.cashAmount - amount;
+                ba.decreaseAccount((double) amount);
+                JOptionPane.showMessageDialog(null,"The money on your account has been decreased by " + amount + " Euros and is now " + ba.getBalance() + " Euros.");
+		terminal.decreaseCashAmount(amount);
                 return true;
                 }   
                 else{
@@ -44,7 +48,7 @@ public class Customer extends Person{
                   return false;
                 }
             }
-                															// controls if enough Cash is left
+                														
 	
 	}
                 

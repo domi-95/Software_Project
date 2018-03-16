@@ -1,4 +1,4 @@
-//Employye is entitled to refill the ATM when it runs out of cash
+//Employee is entitled to refill the ATM when it runs out of cash
 package software_project;
 
 
@@ -7,7 +7,7 @@ public class Employee extends Person{
 		super(name,pid);
 	}
 	public static void refillATM (ATM terminal, int amount){																//Employee refills
-		terminal.cashAmount = terminal.cashAmount + amount;
+		terminal.increaseCashAmount(amount);
 		
 	}
 }

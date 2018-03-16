@@ -12,8 +12,8 @@ public class ATMRegister {
     
     static{
         ATMlist.add(new ATM(10000, "Kokkola"));
-       ATMlist.add(new ATM(15000, "Tampere"));
-       ATMlist.add(new ATM(12500, "Helsinki"));
+        ATMlist.add(new ATM(15000, "Tampere"));
+        ATMlist.add(new ATM(12500, "Helsinki"));
     }
     
     public boolean addATM(int money, String location){

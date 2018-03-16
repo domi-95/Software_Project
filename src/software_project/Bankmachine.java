@@ -10,6 +10,12 @@ public interface Bankmachine {
     public String getLocation();
 
     public int getSerialNumber();
+    
+    public int getCashAmount();
+    
+    public void decreaseCashAmount(int cashAmount);
+    
+    public void increaseCashAmount(int cashAmount);
 
     
 }

@@ -4,9 +4,9 @@ package software_project;
 
 
 public class Session {
-    ATM terminal;
-    Banking_account bank;
-    BankingSystem system;
+    private ATM terminal;
+    private Banking_account bank;
+    private BankingSystem system;
 
     public Session(ATM terminal, Banking_account bank, BankingSystem system) {
         this.terminal = terminal;

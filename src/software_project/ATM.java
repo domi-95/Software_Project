@@ -6,10 +6,10 @@ package software_project;
 import javax.swing.JOptionPane;
 
 public final class ATM implements Bankmachine{
-	int cashAmount;
-        String location;
-	int serialNumber;
-        static int atmCounter = 1;						
+	private int cashAmount;
+        private String location;
+	private int serialNumber;
+        private static int atmCounter = 1;						
         
         
 	public ATM (int amount, String location){
@@ -28,6 +28,20 @@ public final class ATM implements Bankmachine{
     public int getSerialNumber() {
         return serialNumber;
     }
+
+    public int getCashAmount() {
+        
+        return cashAmount;
+    }
+
+    public void decreaseCashAmount(int cashAmount) {
+        this.cashAmount = this.cashAmount - cashAmount;
+        
+    }
+    public void increaseCashAmount(int cashAmount){
+        this.cashAmount = this.cashAmount + cashAmount;
+    }
+    
    public void checkCashAmount() {
 		if (cashAmount < 1000){
 			JOptionPane.showMessageDialog(null,"Cash Amount is getting low. It needs to be refilled. Please call an employee");	//Informationsfeld am Bildschirm
@@ -47,25 +61,3 @@ public final class ATM implements Bankmachine{
 
 	
 }
- 
-class Manager extends Person{
-	
-	public Manager(String name, int pid){
-		super(name,pid);
-	}
-	
-	public int defineCashAmount(ATM terminal){
-		
-		int amount;
-		amount = (terminal.cashAmount -1000)*-1;																	// to have 1000 Euro Cash
-		
-		return amount;
-		
-	}
-}
-
-
-
-
-
-    

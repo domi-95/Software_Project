@@ -3,14 +3,14 @@ package software_project;
 
 public class Banking_account{
    
-	String bnr;
-	double balance;
-        String pin;
-        Customer cst;
+	private String bnr;
+	private double balance;
+        private String pin;
+        private Customer cst;
 	
 	public Banking_account(Customer cst, String bnr, double balance ){
 	this.bnr = bnr;
-        pin = cst.pin;
+        pin = cst.getPin();
 	this.balance = balance;
         this.cst = cst;
 	}
@@ -30,6 +30,12 @@ public class Banking_account{
 
     public Customer getCst() {
         return cst;
+    }
+    public void decreaseAccount(double amount){
+        this.balance = this.balance - amount;
+    }
+    public void increaseAccount(double amount){
+        this.balance = this.balance + amount;
     }
 
    

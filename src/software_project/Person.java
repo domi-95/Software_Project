@@ -5,8 +5,8 @@ package software_project;
 
 public abstract class Person {
                        
-	public int id;
-	public String name;
+	private int id;
+	private String name;
 	
 	
 	public Person(String name, int id){
