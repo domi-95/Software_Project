@@ -19,7 +19,12 @@ public class InstancesFile {
     
     public static void main(String[] args) {
         
-        System.out.println(accountlist);
+        System.out.println(customerlist);
+        Customer c = customerlist.get(0);
+        String pin = c.getPin();
+        String name = c.getName();
+        System.out.println(pin);
+        System.out.println(name);
                 
         
         
