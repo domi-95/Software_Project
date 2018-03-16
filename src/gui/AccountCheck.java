@@ -13,10 +13,10 @@ public class AccountCheck extends javax.swing.JFrame {
      public AccountCheck(Session s) {
         initComponents(); 
         this.s = s;
-        Banking_account acc = s.getBank();
-       String balance = String.valueOf(acc.getBalance());
+        txtAmount.setText(s.getSystem().checkBalance(s));
+        
  
-        txtAmount.setText(balance);             
+                     
         
     }
 

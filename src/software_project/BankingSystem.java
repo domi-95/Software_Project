@@ -27,4 +27,10 @@ public void transferMoney(Banking_account ba1, Banking_account ba2, double amoun
          ba2.increaseAccount(amount);
          JOptionPane.showMessageDialog(null, "You transfered the amount of " + amount + " Euros successfully to " + ba2.getCst().getName()+". Thank you.");
      }
- }
+ 
+public String checkBalance(Session s){
+       Banking_account acc = s.getBank();
+       String balance = String.valueOf(acc.getBalance());
+       return balance;
+}
+}
