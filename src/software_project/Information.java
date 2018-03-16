@@ -19,7 +19,7 @@ import java.util.logging.Logger;
 public class Information {
     public static void main(String[] args) {
         
-       
+       new gui.ChooseATM().setVisible(true);
      
         try {
               Scanner s = new Scanner(new File("src/software_project/CustomerFile.txt"));
@@ -42,12 +42,7 @@ public class Information {
         }
  
                 
-        for (int i = 0; i< InstancesFile.customerlist.size(); i++){
-            System.out.println(InstancesFile.customerlist.get(i));
                
-                    
-        }
-        
         
     }
     
