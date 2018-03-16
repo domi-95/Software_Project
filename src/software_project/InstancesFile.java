@@ -5,7 +5,10 @@
  */
 package software_project;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Scanner;
 import sun.applet.Main;
 
 /**
@@ -28,6 +31,26 @@ public class InstancesFile {
    
    
    static{
+       try {
+              Scanner s = new Scanner(new File("src/software_project/CustomerFile.txt"));
+            
+            
+            while(s.hasNextLine()){
+               
+                String help = s.nextLine();
+                String [] help1 = help.split(",");
+                String namehelp = help1[0];
+                int cashhelp = Integer.parseInt(help1[1]);
+                String pinhelp = help1[2];
+                InstancesFile.customerlist.add(new Customer(namehelp,cashhelp, pinhelp));
+            }
+           
+         }
+          
+        catch (FileNotFoundException e){
+            System.out.print("Exception");
+        }
+ 
        
        accountlist.add(new Banking_account(customerlist.get(0), "051235", 3000.45));
        accountlist.add(new Banking_account(customerlist.get(1), "0666", 30.50));

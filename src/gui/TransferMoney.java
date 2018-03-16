@@ -183,6 +183,7 @@ public class TransferMoney extends javax.swing.JFrame {
                found = true;
                if (bs.checkAccount(s.getBank(), amount) == true){
                     bs.transferMoney(s.getBank(), to, amount);
+                   // HomeScreen next = new HomeScreen(s).setVisible(true);
                };
               
            }

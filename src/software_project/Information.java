@@ -21,27 +21,7 @@ public class Information {
         
        new gui.ChooseATM().setVisible(true);
      
-        try {
-              Scanner s = new Scanner(new File("src/software_project/CustomerFile.txt"));
-            
-            
-            while(s.hasNextLine()){
-               
-                String help = s.nextLine();
-                String [] help1 = help.split(",");
-                String namehelp = help1[0];
-                int cashhelp = Integer.parseInt(help1[1]);
-                String pinhelp = help1[2];
-                InstancesFile.customerlist.add(new Customer(namehelp,cashhelp, pinhelp));
-            }
-           
-         }
-          
-        catch (FileNotFoundException e){
-            System.out.print("Exception");
-        }
- 
-                
+                     
                
         
     }
