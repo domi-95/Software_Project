@@ -1,15 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+// GUI let the Customer choose which action to do next
 package gui;
 
 import software_project.*;
 
 public class HomeScreen extends javax.swing.JFrame {
 
-    Session s;
+    private Session s;
     
     public HomeScreen() {
         initComponents();

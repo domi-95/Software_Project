@@ -7,7 +7,7 @@ import software_project.*;
 
 public class WithdrawCashDifferent extends javax.swing.JFrame {
         
-     Session s;
+    private Session s;
    
     public WithdrawCashDifferent() {
         initComponents();

@@ -6,8 +6,8 @@ import software_project.*;
 
 
 public class PINCheck extends javax.swing.JFrame {
-    int counter = 0;
-    Session s;
+    private int counter = 0;
+    private Session s;
 
    
     public PINCheck() {

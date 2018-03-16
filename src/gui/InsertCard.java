@@ -5,7 +5,7 @@ import software_project.*;
 
 public class InsertCard extends javax.swing.JFrame {
 
-    Session s;
+    private Session s;
    
     public InsertCard() {
         initComponents();

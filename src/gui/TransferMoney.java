@@ -7,9 +7,8 @@ import software_project.*;
 
 public class TransferMoney extends javax.swing.JFrame {
 
-    Session s;
-    InstancesFile file;
-    boolean found = false;
+    private Session s;
+    private boolean found = false;
     
     public TransferMoney() {
         initComponents();

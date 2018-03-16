@@ -5,7 +5,7 @@ import software_project.*;
 
 public class AccountCheck extends javax.swing.JFrame {
 
-    Session s;
+    private Session s;
    
     public AccountCheck() {
         initComponents();     

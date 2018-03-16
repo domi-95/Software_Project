@@ -5,9 +5,9 @@ import software_project.*;
 
 public class ChooseATM extends javax.swing.JFrame {
 
-    ATM terminal;
-    Session s;
-    BankingSystem bs = new BankingSystem(101);
+    private ATM terminal;
+    private Session s;
+    private BankingSystem bs = new BankingSystem(101);
     
     public ChooseATM() {
         initComponents();

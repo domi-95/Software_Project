@@ -5,11 +5,8 @@ import software_project.*;
 
 public class WithdrawCash extends javax.swing.JFrame {
     
-   Session s;
+   private Session s;
    
-    /**
-     * Creates new form WithdrawCash
-     */
     public WithdrawCash() {
         initComponents();
     }
