@@ -30,7 +30,6 @@ public class AccountCheck extends javax.swing.JFrame {
         txtAmount = new javax.swing.JLabel();
         btnReturn = new javax.swing.JButton();
         btnLogout = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -52,8 +51,6 @@ public class AccountCheck extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/gui/BoFss.png"))); // NOI18N
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -63,9 +60,7 @@ public class AccountCheck extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(jLabel2)
-                                .addGap(44, 44, 44)
+                                .addGap(120, 120, 120)
                                 .addComponent(txtBalance))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(147, 147, 147)
@@ -83,14 +78,9 @@ public class AccountCheck extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(43, 43, 43)
-                        .addComponent(txtBalance))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel2)))
-                .addGap(24, 24, 24)
+                .addGap(43, 43, 43)
+                .addComponent(txtBalance)
+                .addGap(73, 73, 73)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtEuro)
                     .addComponent(txtAmount))
@@ -129,7 +119,6 @@ public class AccountCheck extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnLogout;
     private javax.swing.JButton btnReturn;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel txtAmount;
     private javax.swing.JLabel txtBalance;
     private javax.swing.JLabel txtEuro;

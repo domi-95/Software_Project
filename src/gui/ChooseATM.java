@@ -17,14 +17,11 @@ public class ChooseATM extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel2 = new javax.swing.JLabel();
         txtChooseATM = new javax.swing.JLabel();
         btnKokkola = new javax.swing.JButton();
         btnTampere = new javax.swing.JButton();
         btnHelsinki = new javax.swing.JButton();
         logo = new javax.swing.JLabel();
-
-        jLabel2.setText("jLabel2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -139,7 +136,6 @@ public class ChooseATM extends javax.swing.JFrame {
     private javax.swing.JButton btnHelsinki;
     private javax.swing.JButton btnKokkola;
     private javax.swing.JButton btnTampere;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel logo;
     private javax.swing.JLabel txtChooseATM;
     // End of variables declaration//GEN-END:variables

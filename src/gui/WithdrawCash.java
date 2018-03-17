@@ -21,7 +21,7 @@ public class WithdrawCash extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
+        txtChoose = new javax.swing.JLabel();
         btn10e = new javax.swing.JButton();
         btn50e = new javax.swing.JButton();
         btn100e = new javax.swing.JButton();
@@ -31,7 +31,7 @@ public class WithdrawCash extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Please select the amount of cash you want to withdraw");
+        txtChoose.setText("Please select the amount of cash you want to withdraw");
 
         btn10e.setText("10 Euro");
         btn10e.addActionListener(new java.awt.event.ActionListener() {
@@ -84,7 +84,7 @@ public class WithdrawCash extends javax.swing.JFrame {
                         .addComponent(logo)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jLabel1)
+                            .addComponent(txtChoose)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addGroup(layout.createSequentialGroup()
@@ -104,7 +104,7 @@ public class WithdrawCash extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(26, 26, 26)
-                        .addComponent(jLabel1))
+                        .addComponent(txtChoose))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(logo)))
@@ -180,7 +180,7 @@ public class WithdrawCash extends javax.swing.JFrame {
     private javax.swing.JButton btn50e;
     private javax.swing.JButton btnCancel;
     private javax.swing.JButton btndifferent;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel logo;
+    private javax.swing.JLabel txtChoose;
     // End of variables declaration//GEN-END:variables
 }
