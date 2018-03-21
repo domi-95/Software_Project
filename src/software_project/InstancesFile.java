@@ -38,7 +38,7 @@ public class InstancesFile {
         }
  
        
-       accountlist.add(new Banking_account(customerlist.get(0), "051235", 3000000.45));
+       accountlist.add(new Banking_account(customerlist.get(0), "051235", 3000.45));
        accountlist.add(new Banking_account(customerlist.get(1), "0666", 30.50));
        accountlist.add(new Banking_account(customerlist.get(2), "02345",4000.45));
      

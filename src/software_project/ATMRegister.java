@@ -11,7 +11,7 @@ public class ATMRegister {
     public static ArrayList<ATM> ATMlist = new ArrayList<ATM>();
     
     static{
-        ATMlist.add(new ATM(10000, "Kokkola"));
+        ATMlist.add(new ATM(500, "Kokkola"));
         ATMlist.add(new ATM(15000, "Tampere"));
         ATMlist.add(new ATM(12500, "Helsinki"));
     }
